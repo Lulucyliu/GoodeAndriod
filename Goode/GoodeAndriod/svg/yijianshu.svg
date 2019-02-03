@@ -1,0 +1,16 @@
+<svg id="意见书" xmlns="http://www.w3.org/2000/svg" width="136" height="136" viewBox="0 0 136 136">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 4px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="矩形_7" data-name="矩形 7" class="cls-1" d="M50,33.008v11M33,52h71M83,33.008v11M44,69H91"/>
+  <path id="矩形_16" data-name="矩形 16" class="cls-1" d="M55.25,38h22.5M89,38h11a4,4,0,0,1,4,4V98.5M89.5,104H36a4,4,0,0,1-4-4V42a4,4,0,0,1,4-4h8.5"/>
+</svg>

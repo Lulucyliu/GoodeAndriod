@@ -1,0 +1,83 @@
+{
+	"index.html": {
+		"resources": [
+			"view/menu/indexmenu.html",
+			"tabbar.html",
+			"js/jquery.min.js",
+			"js/jquery-3.2.1.js",
+			"tab.html"
+		],
+		"refer": [
+			"view/menu/cha_kan_tuan_dui_fu_wu_qi_ye.html",
+			"view/menu/indexmenu.html",
+			"tabbar.html",
+			"view/menu/lv_shi_ji_fen_cha_kan.html",
+			"index-menu.html",
+			"tab.html",
+			"view/menu/findcompany.html",
+			"view/menu/grid-default.html",
+			"login.html"
+		]
+	},
+	"index-menu.html": {
+		"refer": [
+			"index.html",
+			"view/menu/findcompany.html",
+			"login.html",
+			"setting.html",
+			"view/Htqc/HtqcSQ.html",
+			"view/Htqc/HtqcXQ.html",
+			"view/Htqc/3qicao.html",
+			"view/Htqc/zqicao.html"
+		],
+		"resources": [
+			"img/real.jpeg",
+			"js/jquery.min.js",
+			"js/jquery.i18n.properties-min-1.0.9.js",
+			"img/top-background.jpg",
+			"js/language.js",
+			"font-awesome-4.7.0/css/font-awesome.css",
+			"js/jquery-3.2.1.js",
+			"css/menuall.css"
+		]
+	},
+	"login.html": {
+		"refer": [
+			"index.html",
+			"index-menu.html"
+		],
+		"resources": [
+			"assets/i/favicon.png",
+			"assets/css/admin.css",
+			"assets/css/app.css",
+			"assets/css/amazeui.min.css"
+		]
+	},
+	"setting.html": {
+		"refer": [
+			"index-menu.html"
+		],
+		"resources": []
+	},
+	"tab.html": {
+		"resources": [
+			"font-awesome-4.7.0/css/font-awesome.min.css",
+			"js/jquery.i18n.properties-min-1.0.9.js",
+			"js/language.js",
+			"font-awesome-4.7.0/css/font-awesome.css"
+		],
+		"refer": []
+	},
+	"view/menu/findcompany.html": {
+		"refer": [
+			"view/menu/company-details.html"
+		],
+		"resources": []
+	},
+	"view/Htqc/zqicao.html": {
+		"refer": [
+			"view/Htqc/HtqcXQ.html"
+		],
+		"resources": []
+	}
+}

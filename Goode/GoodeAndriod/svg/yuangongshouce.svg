@@ -1,0 +1,17 @@
+<svg id="员工手册" xmlns="http://www.w3.org/2000/svg" width="136" height="136" viewBox="0 0 136 136">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 4px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="矩形_7" data-name="矩形 7" class="cls-1" d="M75.6,63.134H96.529m-20.926,16H96.529"/>
+  <path id="矩形_22" data-name="矩形 22" class="cls-1" d="M86.021,102H34a4,4,0,0,1-4-4V38a4,4,0,0,1,4-4h68a4,4,0,0,1,4,4V98a4,4,0,0,1-4,4H94.083"/>
+  <path id="圆角矩形_1" data-name="圆角矩形 1" class="cls-1" d="M40,89V77a9.991,9.991,0,0,1,5.575-8.958,8.5,8.5,0,0,0,10.85,0A9.991,9.991,0,0,1,62,77V89H40ZM51,62.5a8,8,0,1,1,8-8A8,8,0,0,1,51,62.5Z"/>
+</svg>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="keywords" content="index">
+		<meta name="renderer" content="webkit">
+		<link rel="icon" type="image/png" href="../../assets/i/favicon.png">
+		<link rel="apple-touch-icon-precomposed" href="../../assets/i/app-icon72x72@2x.png">
+		<meta name="apple-mobile-web-app-title" content="Amaze UI" />
+		<link rel="stylesheet" href="../../assets/css/amazeui.min.css" />
+		<link rel="stylesheet" href="../../assets/css/admin.css">
+		<link rel="stylesheet" href="css/app.css">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="css/mui.css">
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/jquery.min.js"></script>
+		<!-- <script type="text/javascript" src="js/md5.js"></script> -->
+		<title></title>
+	</head>
+<style>
+.am-form input {
+	    background: #fff;
+	    font-size: 12px;
+	    line-height: 30px;
+	    text-indent: 10px;
+	    border-radius: 0px 0px 6px 6px;
+			margin-bottom: 0px;
+	}
+</style>
+	
+	<body data-type="login">
+	<header class="mui-bar mui-bar-nav">
+		
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">修改密码</h1>
+
+	</header>
+  <div class="am-g myapp-login " style="background-color: #FFFFFF;">
+	<div class="myapp-login-logo-block  tpl-login-max">
+		<div class="myapp-login-logo-text">
+			<div class="myapp-login-logo-text">
+				
+				
+			</div>
+		</div>
+
+		<div class="login-font">
+			
+		</div>
+		<div class="am-u-sm-10 login-am-center ">
+			<form class="am-form" style="margin-top:50px;border: none;height: 100px;">
+				<fieldset>
+					<div class="am-form-group" >
+						<input type="password" class="" id="oldpsw" placeholder="输入原密码" style="border-radius: 6px 6px 0px 0px;border-bottom: #000000;">
+					</div>
+					<div class="am-form-group">
+						<input type="password" class="" id="newpsw1" placeholder="输入新密码" style="border-radius: 0px 0px 0px 0px;border-bottom: none;">
+					</div>
+					<div class="am-form-group">
+						<input type="password" class="" id="newpsw2" placeholder="重新输入新密码确认" style="border-radius: 0px 0px 6px 6px;">
+					</div>
+					<p><button type="button" class="am-btn am-btn-default" id="change" style="margin-top: 30px;">修改</button></p>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/amazeui.min.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+
+
+
+<script type="text/javascript" charset="UTF-8">
+		var oldpsw;
+		var newpsw1;
+		var newpsw2;
+		change.addEventListener('tap', function() {
+			getValues();
+			request_login(oldpsw, newpsw1,newpsw2);
+		}); 
+
+		//得到账号密码中的值
+		function getValues() {
+			oldpsw = document.getElementById('oldpsw').value;
+			newpsw1 = document.getElementById('newpsw1').value;
+			newpsw2 =document.getElementById('newpsw2').value;
+		}
+
+		//登录请求  
+		function request_login(oldpsw, newpsw1,newpsw2) {
+		
+			var userid=localStorage.getItem('userid');
+					$.ajax({
+				url: 'http://121.42.29.124:8180/Goode/Apishezhi/doUpdatePassword',
+				timeout: 30000,	
+			data:{oldpsw:oldpsw,
+					newpsw1:newpsw1,
+					newpsw2:newpsw2,
+					userid:100,},			
+				type: 'GET',
+				dataType: "json", 
+				success:function(data) {
+			
+					if(data.flag == '200') { 
+						//getUserInfo();
+						
+						
+						plus.nativeUI.toast("修改成功");
+						mui.back();
+						// var indexPage = plus.webview.getWebviewById('about.html');
+						// mui.fire(indexPage, 'reload_data', {});
+					
+            
+					} else {
+						//console.log(data.flag);
+						mui.toast(data.msg);
+					}
+				},
+				error: function(xhr, type, errorThrown) {
+					//异常处理
+					alert("error");
+					console.log(type);
+					console.log(xhr);
+					console.log(errorThrown);
+					mui.toast("网络异常");
+				}
+			});
+			};
+	</script>
+</html>

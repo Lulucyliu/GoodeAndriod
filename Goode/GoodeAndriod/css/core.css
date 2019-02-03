@@ -1,0 +1,116 @@
+/*
+*  author: AUI
+*  core.css
+*  http://azenui.com/
+*  http://www.a-ui.cn/
+*/
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu {
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details {
+	display: block;
+}
+
+input::input-placeholder {
+	color: #222 ;
+}
+
+/* 有些资料显示需要写，有些显示不需要，但是在编辑器webstorm中该属性不被识别 */
+::-webkit-input-placeholder {
+	/* WebKit browsers */
+	color: #888;
+}
+
+:-moz-placeholder {
+	/* Mozilla Firefox 4 to 18 */
+	color: #888;
+}
+
+::-moz-placeholder {
+	/* Mozilla Firefox 19+ */
+	color: #888;
+}
+
+:-ms-input-placeholder {
+	/* Internet Explorer 10+ */
+	color: #888;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+	outline: none;
+}
+
+:focus {
+	outline: 0 !important;
+}
+
+input::-moz-focus-inner {
+	border-color: transparent !important;
+}
+
+input {
+	-webkit-appearance: none;
+	outline: none;
+}
+
+input[type="checkbox"] {
+	-webkit-appearance: none;
+	outline: none;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-size: 12px;
+	-webkit-font-smoothing: antialiased;
+	font-family: arial, sans-serif;
+	background: #efefef;
+}
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, iframe {
+	margin: 0;
+	padding: 0;
+	
+}
+
+img, article, aside, details, figcaption, figure, footer, header, menu, nav, section, summary, time, mark, audio, video {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+}
+
+fieldset, img {
+	border: 0;
+}
+
+address, caption, cite, dfn, em, th, var, i, em {
+	font-style: normal;
+	font-weight: normal;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+.tab-nav-item.tab-active:before {
+	content: '';
+	width: 70%;
+	height: 2px;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	margin-left: -35%;
+	z-index: 4;
+	background-color: currentColor;
+}
+

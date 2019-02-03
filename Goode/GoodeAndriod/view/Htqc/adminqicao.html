@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/mui.indexedlist.css" rel="stylesheet" />
+		<link href="../../css/List.css" rel="stylesheet" />
+		<link href="../../css/pageStyle.css" rel="stylesheet" type="text/css" />
+		<script src="../../js/jquery.min.js"></script>
+		<style>
+			html,
+			body {
+				height: 100%;
+				overflow: hidden;
+			}
+			.mui-bar {
+				-webkit-box-shadow: none;
+				box-shadow: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<section class="aui-flexView">
+			<header class="aui-navBar aui-navBar-fixed">
+				<a href="javascript:;" class="aui-navBar-item">
+					<i class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></i>
+				</a>
+				<div class="aui-center">
+					<span class="aui-center-title">合同起草管理</span>
+				</div>
+				<!-- <a href="javascript:;" class="aui-navBar-item">开发票 -->
+				</a>
+			</header>
+			<section class="aui-scrollView" id="pullRefresh">
+				<div class="aui-order-title" id="mainLeftMenu">
+					<!-- <h2>已完成订单</h2> -->
+					<!-- <div class="aui-order-box">
+						<a href="javascript:void(0);" class="aui-well-item">
+							<div class="aui-well-item-bd">
+								<h3>合同向对方名称</h3>
+							</div>
+							<span class="aui-well-item-fr">未提交给律师</span>
+						</a>
+						<p class="aui-order-fl aui-order-time">设定时限：不限时长</p>
+						<p class="aui-order-fl aui-order-address">提交时间：2018-11-5 13:24:23</p>
+						<p class="aui-order-fl aui-order-door">已用时间：13天 02:13:43</p>
+						<p class="aui-order-fl aui-order-address">负责律师：徐纯发</p>
+						<p class="aui-order-fl aui-order-address">联系人：</p>
+					</div> -->
+				</div>
+			</section>
+		</section>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/mui.indexedlist.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init({
+            pullRefresh: {
+                container: '#pullRefresh',//待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+                up: {
+                    height: 50,//可选.默认50.触发上拉加载拖动距离
+                    auto: false,//可选,默认false.自动上拉加载一次
+                    contentrefresh: "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容
+                    contentnomore: '没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
+                    callback: pullfreshFunc //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+                }
+            }
+        });
+			mui.ready(function() {
+				//alert('ready');
+				var header = document.querySelector('header.mui-bar');
+				var list = document.getElementById('list');
+				//calc hieght
+				list.style.height = (document.body.offsetHeight) + 'px';
+				//create
+				window.indexedList = new mui.IndexedList(list);
+
+			});
+			window.onload = function() {
+				mui('#offCanvasSideScroll').scroll();
+			};
+			//得到index-menu的数据
+			var userid = '';
+			mui.plusReady(function() {
+				//得到登陆页面的参数
+				//			      alert(lawyerid);
+				//var lawyerid;
+				// var self = plus.webview.currentWebview();
+				var storage = window.localStorage;
+				userid = storage.userid;
+				sendRequest(userid);
+				var aniShow = "slide-in-right";
+				//关于backbutton和menubutton两个按键的说明，在iOS平台不存在，故需隐藏
+				if (!mui.os.android) {
+					var span = document.getElementById("android-only")
+					if (span) {
+						span.style.display = "none";
+					}
+				}
+
+				var subWebview = null,
+					template = null,
+					index = null;
+				//获得主页面webview引用；
+				index = plus.webview.currentWebview().opener();
+				var _self = plus.webview.currentWebview();
+				_self.drag({
+					direction: "left",
+					moveMode: "followFinger"
+				}, {
+					view: index,
+					moveMode: "follow"
+				}, function(e) {});
+
+			});
+
+			mui('.mui-indexed-list-inner').on('tap', '#ajia', function() {
+				//alert('go');
+				mui.openWindow({
+					url: 'company-details.html'
+				});
+			});
+var flag = true, counter = 1, pageSize = 10;
+									function pullfreshFunc() {
+										setTimeout(function () {
+											mui('#pullRefresh').pullRefresh().endPullupToRefresh(!flag);//参数为true代表没有更多数据了。
+											sendRequest(userid);
+										}, 500);
+							
+									};
+			function sendRequest(userid) {
+				//alert(lawyerid);
+				$.ajax({
+					//url: 'http://api.map.baidu.com/location/ip?ak=ia6HfFL660Bvh43exmH9LrI6',   
+					//url: 'http://118.24.8.104:8081/Goode/ApiLogin',   
+					//url: 'http://localhost:8080/Goode/ApiLogin/findfunctions',
+					url: 'http://121.42.29.124:8180/Goode/Apihetqc/findByPageg',
+					//url: 'http:118.24.8.104:8081/Goode/ApiLogin',
+					timeout: 30000,
+										data: {
+											userid: userid,
+											times:counter
+										},
+					type: 'GET',
+					dataType: "json",
+					success: function(List) {
+						//alert(data[0].companyid);
+						// alert(userid);
+						var data=[];
+						data=List.list;
+						flag = !(data[0] == null || data[0] == "" || !data[0]||data.length<10);
+						if (flag) {
+								counter++;
+						}
+						var mainstr = '';
+						var sonstr = '';
+						var status = '';
+						var detail = '';
+						//			alert(userid);
+						for (var i = 0; i < data.length; i++) {
+							//是一级菜单
+							//alert(data.name);
+							switch (parseInt(data[i].status)) {
+								case -1:
+									status = '已删除';
+									break;
+								case 10:
+									status = '未提交给律师';
+									break;
+								case 20:
+									status = '已提交等待确认';
+									break;
+								case 30:
+									status = '律师已确认';
+									break;
+								case 40:
+									status = '已下发助理律师';
+									break;
+								case 45:
+									status = '助理律师已确认';
+									break;
+								case 50:
+									status = '助理律师已处理';
+									break;
+								case 55:
+									status = '助理返回 , 已读';
+									break;
+								case 60:
+									status = '已结案，待评分';
+									break;
+								case 70:
+									status = '已结案，已评分';
+									break;
+							}
+							if (data[i].pingjia == '10' && data[i].plday < 3)
+								status += ',待评价';
+							if (data[i].pingjia == '20')
+								status += ',已评价';
+							if (data[i].pingjia == '10' && data[i].plday > 3)
+								status += ',默认好评';
+							if (data[i].responselawername == null)
+								detail = '分配律师';
+							else if (data[i].responselawername != null && data[i].status < 60)
+								detail = '修改律师';
+							else
+								detail = '';
+							mainstr += '<div class="aui-order-box" id="' + data[i].id +'">'+
+								'<a href="javascript:void(0);" class="aui-well-item">' +
+								'<div class="aui-well-item-bd">';
+							if (data[i].xiangduifang != null && data[i].xiangduifang != '')
+								mainstr += '<h3 class="headName">' + data[i].xiangduifang + '</h3>';
+							else
+								mainstr += '<h3>' + '暂无' + '</h3>';
+							mainstr += '</div>' +
+								'<span class="aui-well-item-fr" name="'+data[i].status+'">' + status + '</span>' +
+								'<span style="display:none">' + data[i].name + '</span>' +
+								'</a>';
+							if (data[i].expecttime != null && data[i].expecttime != '')
+								mainstr += '<p class="aui-order-fl aui-order-time">设定时限：' + data[i].expecttime + '</p>';
+							else
+								mainstr += '<p class="aui-order-fl aui-order-time">设定时限：' + '暂无' + '</p>';
+							if (data[i].submittime != null && data[i].submittime != '')
+								mainstr += '<p class="aui-order-fl aui-order-address">提交时间：' + data[i].submittime + '</p>';
+							else
+								mainstr += '<p class="aui-order-fl aui-order-address">提交时间：' + '暂无' + '</p>';
+							if(data[i].status>=60&&data[i].totaltime!=null&&data[i].totaltime!=''&&data[i].totalday!=null&&data[i].totalday!='')
+							mainstr +='<p class="aui-order-fl aui-order-door">已用时间：'+data[i].totalday+'天 '+data[i].totaltime+'</p>';
+							else if(data[i].status<60&&data[i].status>10&&data[i].pasttime!=null&&data[i].pasttime!=''&&data[i].pastday!=null&&data[i].pastday!='')
+							mainstr +='<p class="aui-order-fl aui-order-door">已用时间：'+data[i].pastday+'天 '+data[i].pasttime+'</p>';
+							else 
+							mainstr +='<p class="aui-order-fl aui-order-door">已用时间：暂无</p>';
+							if (data[i].responselawername != null && data[i].responselawername != '')
+								mainstr += '<p class="aui-order-fl aui-order-address">负责律师：' + data[i].responselawername + '</p>';
+							else
+								mainstr += '<p class="aui-order-fl aui-order-address">负责律师：' + '暂无' + '</p>';
+							if (data[i].lowerlawername != null && data[i].lowerlawername != '')
+								mainstr += '<p class="aui-order-fl aui-order-door">助理律师：' + data[i].lowerlawername + '</p>';
+							else
+								mainstr += '<p class="aui-order-fl aui-order-door">助理律师：' + '暂无' + '</p>';
+							if (data[i].lianxiren != null && data[i].lianxiren != '')
+								mainstr += '<p class="aui-order-fl aui-order-address">联系人：' + data[i].lianxiren + '</p>';
+							else
+								mainstr += '<p class="aui-order-fl aui-order-address">联系人：' + '暂无' + '</p>';
+							mainstr += '</div>';
+							$("#mainLeftMenu").append(mainstr);
+							mainstr = '';
+							detail = '';
+						}
+
+					},
+					error: function(XMLHttpRequest, textStatus, errorThrown) {
+						//alert(errorThrown)
+						//alert(url)
+						alert("ERRor")
+					}
+				});
+			};
+			mui('#mainLeftMenu').on('tap', 'div', function() {
+				//alert('go');
+
+				// alert('tap'+functionName);
+				var htqcid = this.getAttribute("id");
+				// alert(htqcid);
+				var status = this.children[0].children[1].getAttribute("name");
+				var LawyerName = this.children[4].innerHTML;
+				var companyName = this.children[0].children[2].innerHTML;
+				var statusStr = this.children[0].children[1].innerHTML;
+				// alert(functionName);
+				mui.openWindow({
+					url: 'HtqcXQ.html',
+					id: 'HtqcXQ.html',
+					extras: {
+						htqcid:htqcid,
+						status:status,
+						statusStr:statusStr,
+						LawyerName:LawyerName,
+						companyName:companyName
+					}
+				});
+			});
+		</script>
+	</body>
+
+</html>

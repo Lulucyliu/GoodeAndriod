@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<link href="css/yewu.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/iconfont1.css">
+		<link rel="stylesheet" href="css/iconfont3.css">
+		<script src="js/jquery-3.2.1.js"></script>
+		<!-- <script src="js/mui.min.js"></script>
+		<script src="js/jquery.min.js"></script> -->
+	</head>
+
+	<body style="background-color: #FFFFFF;">
+		<script src="js/mui.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<!-- <div class="mui-card" style="background-color: #FFFFFF;"> -->
+				<!-- <div class="mui-card-header" style="background-color: #FFFFFF;">非诉讼类</div> -->
+				<!-- <div class="mui-card-content" style="color: #FFFFFF;background-color: #FFFFFF;"> -->
+					
+					<div class="mui-card-content-inner yewudiv" style="background-color: #FFFFFF;color: #FFFFFF;padding-top: 0px;padding-bottom: 0px;">
+						<ul class="mui-table-view mui-grid-view " id="unlawsuitUl" style="background-color: #FFFFFF;color: #FFFFFF;padding:5px 0 0 1px;margin-right:0px ;">
+						<li class="mui-table-view-cell mui-media" style="display: block;"><a  style="text-align: center;font-size:30px;padding:5px 0 0 1px;" href="">
+						<div class="mui-media-body" style="font-size: 14px;text-align: left;line-height:120%;font-family: 'Helvetica Neue', Helvetica, sans-serif;">非诉讼业务</div></a></li>
+							</ul> 
+					</div>
+				<!-- </div> -->
+				<!-- <div class="mui-card-footer">页脚</div> -->
+			<!-- </div> -->
+		  <!-- <div id="lawsuitDIV" class="mui-card" style="display: none;"> -->
+		  		<!-- <div class="mui-card-header" style="background-color: #FFFFFF;">诉讼类</div> -->
+					
+			
+		  		<div class="mui-card-content yewudiv"id="lawsuitDIV" style="display: none;">
+		  			<div class="mui-card-content-inner" style="background-color: #FFFFFF;color: #FFFFFF;padding-top: 0px;padding-bottom: 0px;"> 
+		  				<ul class="mui-table-view mui-grid-view " id="lawsuitUl" style="background-color: #FFFFFF;color: #FFFFFF;padding:5px 0 0 1px;margin-right:0px ;">
+								<li class="mui-table-view-cell mui-media" style="display: block; color: #10A0EA;"><a  style="text-align: center;font-size:30px;padding:5px 0 0 1px;" href="">
+								<div class="mui-media-body" style="font-size: 17px;text-align: left;line-height:120%;font-family: 'Helvetica Neue', Helvetica, sans-serif;">诉讼业务</div></a></li>
+		  					</ul>
+		  			</div>
+		  		</div>
+					
+					
+		  		<!-- <div class="mui-card-footer">页脚</div> -->
+		  	<!-- </div> -->
+					<!-- <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+									<span class="mui-icon mui-icon-home"></span>
+									<div class="mui-media-body"><span>主页这就是传说中最长的名字主页这就是传说中最长的名字主页这就是传说中最长的名字主页这就是传说中最长的名字</span></div></a></li> -->
+					<!-- <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+									<span class="mui-icon mui-icon-email"><span class="mui-badge">5</span></span>
+									<div class="mui-media-body">未处理</div></a></li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+									<span class="mui-icon mui-icon-chatbubble"></span>
+									<div class="mui-media-body">新消息</div></a></li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+									<span class="mui-icon mui-icon-location"></span>
+									<div class="mui-media-body">待处理</div></a></li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+									<span class="mui-icon mui-icon-search"></span>
+									<div class="mui-media-body">查询</div></a></li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+									<span class="mui-icon mui-icon-gear"></span>
+									<div class="mui-media-body">设置</div></a></li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+									<span class="mui-icon mui-icon-info"></span>
+									<div class="mui-media-body">关于我们</div></a></li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+									<span class="mui-icon mui-icon-more"></span>
+									<div class="mui-media-body">更多</div></a></li> -->
+			
+	</body>
+<script>
+	   var userid="";
+	   var usertype="";
+	   mui.plusReady(
+		 function() {
+	   var storage=window.localStorage;
+	   userid=storage.userid;
+	   usertype = storage.usertype;
+		 if(userid&&usertype){
+			 sendRequest();
+		 }
+	   });
+	//获得用户对应功能列表 
+	  function sendRequest(){
+	        	$.ajax({
+			    //url: 'http://api.map.baidu.com/location/ip?ak=ia6HfFL660Bvh43exmH9LrI6',   
+			    //url: 'http://118.24.8.104:8081/Goode/ApiLogin',   
+			    //url: 'http://localhost:8080/Goode/ApiLogin/findfunctions',
+			    url: 'http://121.42.29.124:8180/Goode/ApiLogin/findfunctions',
+			    //url: 'http:118.24.8.104:8081/Goode/ApiLogin', 
+			    timeout: 30000,	
+				data:{userid:userid,
+				      usertype:usertype,},			
+			    type: 'GET',
+			    dataType: "json", 
+			    success:function(data){
+				var flag=0;
+				var mainstr=''; 
+				var sonstr='';
+				var sumisunlaw=0;
+				var sumislaw=0;  
+	//			alert(userid);
+	           
+						//为非诉讼功能 
+						for(var i=0;i<data.length;i++){
+							if(data[i].islawsuit=='0'){
+								// alert(data[i].appFunctionName+'   '+data[i].islawsuit);
+							sumisunlaw=sumisunlaw+1; 
+								if(sumisunlaw%4!=0){
+								sonstr='<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-4" style="margin-left:-1px;"><a class="hasAHref" style="text-align: center;font-size:30px;" href="'+data[i].appurl+'">'
+								+'<img class="mui-icon iconfont" src="svg/'+data[i].icon+'.svg" text-align: center; style="height:70%;width:70%; background-color:'+data[i].iconcolor+'; border-radius:10px;"></img>'
+								+'<div class="mui-media-body" style="text-align: center; font-size: 12px;">'+data[i].appFunctionName+'</div></a></li>'; 
+								$("#unlawsuitUl").append(sonstr);
+								}
+								if(sumisunlaw%4==0){
+								sonstr='<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-4" style="margin-left:-1px;"><a class="hasAHref" style="text-align: center;font-size:30px;" href="'+data[i].appurl+'">'
+								+'<img class="mui-icon iconfont" src="svg/'+data[i].icon+'.svg" text-align: center; style="height:70%;width:70%; background-color:'+data[i].iconcolor+'; border-radius:10px; "></img>'
+								+'<div class="mui-media-body" style="text-align: center; font-size: 12px;">'+data[i].appFunctionName+'</div></a></li>';
+								$("#unlawsuitUl").append(sonstr);
+								}
+              }
+// 							if(data[i].islawsuit=='1'){
+// 								sumislaw=sumislaw+1;
+// 								// alert(data[i].icon);
+// 								if(sumislaw%4!=0){
+// 								var lawsuitdiv=document.getElementById("lawsuitDIV");
+// 								lawsuitdiv.style.display = "block";
+// 								sonstr='<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-4" style="margin-left:-20px;margin-right:-20px;"><a class="hasAHref" style="text-align: center;font-size:30px;" href="'+data[i].appurl+'">'
+// 								+'<span class="mui-icon iconfont '+data[i].icon+'" text-align: center; style="font-size:45px;"></span>'
+// 								+'<div class="mui-media-body" style="text-align: center; font-size: 12px;">'+data[i].appFunctionName+'</div></a></li>';
+// 								$("#lawsuitUl").append(sonstr);
+// 								}
+// 								if(sumislaw%4==0){
+// 								var lawsuitdiv=document.getElementById("lawsuitDIV");
+// 								lawsuitdiv.style.display = "block";
+// 								sonstr='<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-4" style="margin-left:-20px;margin-right:-20px;"><a class="hasAHref" style="text-align: center;font-size:30px;" href="'+data[i].appurl+'">'
+// 								+'<span class="mui-icon iconfont '+data[i].icon+'" text-align: center; style="font-size:45px;"></span>'
+// 								+'<div class="mui-media-body" style="text-align: center; font-size: 12px;">'+data[i].appFunctionName+'</div></a></li>';
+// 								$("#lawsuitUl").append(sonstr);
+// 								}
+// 							}
+							
+						}
+						
+						
+// 						sumislaw=sumislaw+1;
+// 						if(sumislaw%4!=0){
+// 						sonstr='<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-4" style="margin-left:-20px;margin-right:27px;"><a style="text-align: center;font-size:30px;" href="'+data[i].appurl+'">'
+// 						+'<span class="mui-icon iconfont '+data[i].icon+'" text-align: center; style="font-size:45px;"></span>'
+// 						+'<div class="mui-media-body" style="text-align: center; font-size: 12px;">'+data[i].appFunctionName+'</div></a></li>';
+// 						$("#unlawsuitUl").append(sonstr);
+// 						}
+// 						if(sumislaw%4==0){
+// 						sonstr='<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-4" style="margin-left:-20px;margin-right:-20px;"><a style="text-align: center;font-size:30px;" href="'+data[i].appurl+'">'
+// 						+'<span class="mui-icon iconfont '+data[i].icon+'" text-align: center; style="font-size:45px;"></span>'
+// 						+'<div class="mui-media-body" style="text-align: center; font-size: 12px;">'+data[i].appFunctionName+'</div></a></li>';
+// 						$("#unlawsuitUl").append(sonstr);
+// 						}
+						//是一级菜单s
+// 						if(data[i].parentid=='-1'){
+// 							mainstr+='<li class="mui-table-view-cell mui-collapse" id="'+data[i].functionid+'">'
+// 							        //+'<a class="mui-navigate-right">'
+// 							        +'<a id="'+data[i].functionid+'a">'
+// 	                                +data[i].functionName
+// 	                                +'</a>'
+// 	                                +'</li>';
+// 	                        $("#mainLeftMenu").append(mainstr);
+// 	                        //再进行查询看是否有子功能
+// 	              for(var j=0;j<data.length;j++){
+// 						        //是一级菜单
+// 						        if(data[j].parentid==data[i].functionid){
+// 							        if(flag==0){//第一次证明是第一个二级子菜单
+// 							        	flag=1;
+// 							            sonstr+='<ul class="mui-table-view mui-table-view-chevron" id="'+data[j].parentid+'ul"></ul>';
+// 							            $("#"+data[j].parentid+"a").addClass("mui-navigate-right");
+// 							            $("#"+data[j].parentid).append(sonstr);
+// 							            sonstr='';
+// 							        }
+// 							        sonstr+='<li class="mui-table-view-cell menu"><a id="'+data[j].functionid+'a" style="width:255px;"  class="hasAHref" href="'+data[j].appurl+'">'+data[j].functionName+'</a></li>';
+// 							        $("#"+data[j].parentid+"ul").append(sonstr);
+// 							        sonstr='';
+// 					            }
+// 					      }
+// 								//无子菜单
+// 								if(flag==0){
+// 									$("#"+data[i].functionid+"a").addClass("hasAHref");
+// 									$("#"+data[i].functionid+"a").attr("href",data[i].appurl);
+// 								}
+// 	              flag=0;//将是否是第一个子菜单重新置零
+// 					    }
+					// mainstr='';
+					// }
+			    },
+			    error:function(XMLHttpRequest, textStatus, errorThrown){
+			    	//alert(errorThrown)
+			    	//alert(url)
+					alert("ERRor");
+				}
+			    });
+			  };
+				mui('.yewudiv').on('tap', 'a', function() {
+						//alert(); 
+						var targetList = this.getAttribute("href");
+						var id=this.getAttribute('id');
+						var aclass = this.getAttribute('class');
+						if(~aclass.indexOf('hasAHref')){
+							
+							// alert(targetList);
+						var href = this.href;
+						//alert(targetList);
+						mui.openWindow({
+									url: targetList,
+									id: targetList,
+									extras:{
+											userid:userid,
+											usertype:usertype,
+									}
+						});
+					}
+				});
+</script>
+</html>

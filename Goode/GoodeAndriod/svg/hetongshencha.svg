@@ -1,0 +1,23 @@
+<svg id="合同审查" xmlns="http://www.w3.org/2000/svg" width="136" height="136" viewBox="0 0 136 136">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 4px;
+      }
+
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="组_1" data-name="组 1">
+    <path id="矩形_6" data-name="矩形 6" class="cls-1" d="M70.8,101.919H42.172a4,4,0,0,1-4-4V34.174a4,4,0,0,1,4-4H85.959a4,4,0,0,1,4,4V67"/>
+    <path id="矩形_10" data-name="矩形 10" class="cls-1" d="M98.267,83.622l-8.7,10.969-7.835-6.214"/>
+    <path id="矩形_7" data-name="矩形 7" class="cls-1" d="M48.007,51.009H80"/>
+    <circle id="椭圆_3" data-name="椭圆 3" class="cls-2" cx="89.5" cy="89.5" r="15.531"/>
+  </g>
+</svg>

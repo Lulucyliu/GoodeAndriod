@@ -1,0 +1,41 @@
+.companyName{
+	 width: 20%;
+	 /* height: 100px; */
+	 display: inline-block;
+	 white-space:nowrap; 
+	 overflow:hidden;
+	 text-overflow:ellipsis;
+}
+.tnayifang{
+	width: 20%;
+	 display: inline-block;
+	 white-space:nowrap; 
+	 overflow:hidden;
+	 text-overflow:ellipsis;
+}
+.nayifang{
+	width: 11%;
+	display: inline-block;
+	white-space:nowrap; 
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+#NolongCompanyName{
+	width: 65%;
+	display: inline-block;
+	white-space:nowrap; 
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.headName{
+	width: 70%;
+	padding-top: 5px;
+	display: inline-block;
+	white-space:nowrap; 
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.bounceInDown{
+	word-wrap: break-word; 
+    word-break: normal; 
+}

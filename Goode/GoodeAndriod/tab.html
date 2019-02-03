@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<link href="css/iconfont2.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.css"/>
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css"/>
+		<title></title>
+	</head>
+
+	<body>		
+		<nav id="bar-tab" class="mui-bar mui-bar-tab" style="background-color: #FFFFFF;">
+			<!-- <a id="lowsuit" class="mui-tab-item" href="view/dynamics/dynamics.html">
+				<span class="fa fa-gavel " style="display: block;"></span>
+		 		<span id="sutong" class="mui-tab-label"  style="font-size: 11px;">诉讼类</span>
+		    </a> -->
+		   <a id="main-page" class="mui-tab-item mui-bar-tab" href="yewu.html">
+				<span class=" mui-icon iconfont icon-shujv2" style="display: block;margin-left: 32%;font-size: 26px;"></span>
+				<span id="shuju" class="mui-tab-label" style="font-size: 8px;">数据</span>
+		    </a>
+			<a id="non-lowsuit" class="mui-tab-item mui-bar-tab" href="yewu.html">
+				<span class=" mui-icon iconfont icon-zhuceshenghe" style="display: block;margin-left: 32%;font-size: 26px;"></span>
+				<span id="shenhezhuce" class="mui-tab-label"  style="font-size: 8px;">注册审核</span>
+			</a>
+			<a id="non-lowsuit" class="mui-tab-item mui-active" href="yewu.html">
+				<span class=" mui-icon iconfont icon-shezhi" style="display: block;margin-left: 32%;font-size: 26px;"></span>
+				<span id="yewu" class="mui-tab-label"  style="font-size: 8px;"></span>
+			</a>
+			<a id="non-lowsuit" class="mui-tab-item mui-bar-tab" href="yewu.html">
+				<span class="mui-icon iconfont icon-shouyeguanli" style="display: block;margin-left: 32%;font-size: 26px;"></span>
+				<span id="shouyeguanli" class="mui-tab-label "  style="font-size: 8px;">首页管理</span>
+			</a>
+			<a id="non-lowsuit" class="mui-tab-item mui-bar-tab" href="index-menu.html">
+				<span class=" mui-icon iconfont icon-wode" style="display: block;margin-left: 32%;font-size: 26px;"></span>
+				<span id="mine" class="mui-tab-label"  style="font-size: 8px;">我的</span>
+			</a>
+       </nav>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+		<script type="text/javascript" src="js/jquery.i18n.properties-min-1.0.9.js" ></script>
+		<script type="text/javascript" src="js/language.js" ></script>
+	</body>
+	<script>
+		var userid;
+		var usertype;
+		  mui.plusReady(function() {
+		    	//得到登陆页面的参数
+		        
+		    	// var self = plus.webview.currentWebview();
+					var storage=window.localStorage;
+					userid=storage.userid;
+					usertype = storage.usertype;
+		      var yewutab=document.getElementById("yewu");
+					if(usertype=='client'){
+						yewutab.innerHTML='申请';
+					}else if(usertype=='admin'){
+						yewutab.innerHTML='管理';
+					}else if(usertype=='lawyer'){
+						yewutab.innerHTML='处理';
+					}
+					
+					});
+		//选项卡点击事件
+				mui('#bar-tab').on('tap','a',function(e){
+					//获取当前点击的选项
+					var targetTab = this.getAttribute('href');
+					//当前选项值传到父webView
+					if(window.plus){
+						var curPage = plus.webview.currentWebview();
+						var targetTitle = this.querySelector('.mui-tab-label').innerHTML;
+						//触发详情页面的targetTab事件
+						mui.fire(curPage.parent(),'tagTab',{
+							targetTitle:targetTitle,
+							targetTab:targetTab
+						});
+					}
+				});
+//		 //解决软键盘弹出子页面被挤压的问题
+//		    var height = document.documentElement.clientHeight || document.body.clientHeight;
+//          window.onresize = function() {
+//              var heightView = document.documentElement.clientHeight || document.body.clientHeight;
+//              if(heightView*1 < height*1) {//heightView<height证明窗口被挤压了     
+//                  $('.mui-bar-tab').css('display','hidden');
+//              }else{
+//                  $('.mui-bar-tab').css('display','block');
+//              }
+//          
+//          };
+	</script>
+</html>
+

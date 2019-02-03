@@ -1,0 +1,39 @@
+
+@font-face {font-family: "iconfont";
+ src:
+ url('../fonts/iconfont.ttf') format('truetype');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:50px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon-shangmenfuwu:before { content: "\e747";color: #f28214; }
+
+.icon-shenghedianhuazixun:before { content: "\e748";color: #15c16d ; }
+
+.icon-hetongqicaoanjian:before { content: "\e749"; color: #1296db ;}
+
+.icon-yuangongshouce:before { content: "\e74b"; color:#f28214 ;}
+
+.icon-sirenlvshiguanli:before { content: "\e74d"; color: #f28214;}
+
+.icon-xitongxiaoxi:before { content: "\e74f"; color: #f28214;}
+
+.icon-hetongshengcha:before { content: "\e751";color: #1296db; }
+
+.icon-jinzhidiaocha:before { content: "\e752"; color: #f28214;}
+
+.icon-lvshihan:before { content: "\e755";color: #C62B26; }
+
+.icon-lvshijianzheng:before { content: "\e757"; color: #1296db;}
+
+.icon-shenghesirenlvshi:before { content: "\e758"; color: #C62B26;}
+
+.icon-zhuantijiangzuo:before { content: "\e759"; color: #15c16d;}
+
+.icon-falvyijianshu:before { content: "\e60b"; color: #15c16d;}
+

@@ -1,0 +1,948 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		 <!--<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>-->
+        <meta content="yes" name="apple-mobile-web-app-capable"/>
+        <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+        <meta content="telephone=no" name="format-detection"/>
+        <link href="../../css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="../../css/message.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/core.css">	
+	    <link rel="stylesheet" type="text/css" href="../../css/home.css">
+	    <link rel="stylesheet" type="text/css" href="../../font-awesome-4.7.0/css/font-awesome.css"/>
+		<link rel="stylesheet" type="text/css" href="../../font-awesome-4.7.0/css/font-awesome.min.css"/>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link href="../../css/List.css" rel="stylesheet"/>
+		<script src="../../js/mui.poppicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/mui.picker.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.mui-icon-star{color: #B5B5B5;font-size: 30px;}
+			.mui-icon-star-filled{color: #FFB400;font-size: 30px;} 
+			/* ul{padding: 10px 0px;} */
+			.ywpj{display: -webkit-box;width: 100%;padding: 0 10px;} 
+			.ywpj a{-webkit-box-flex: 1;display: block;font-size: 15px;line-height: 30px;color: #000;}
+			.ywpj div{-webkit-box-flex: 2;text-align: right;}
+			#info{padding: 20px 10px;}
+		</style>
+	</head>
+	
+    <body style="background: #fff;">
+		<script src="../../js/mui.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../css/HtqcXQ.css"/>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">合同审查详情及相关操作</h1>
+	</header>
+    	
+    	<div class="tit">
+        	<div class="tita" id="titCompanyName">
+        		<div id="NolongCompanyName">
+        			
+        		</div>
+        	</div>
+        	<div class="titb" style="font-size: 16px;" id="titstatus">
+        		
+        	</div>
+        </div>
+        
+        
+        
+<section class="aui-myOrder-content">
+<div class="m-tab demo-small-pitch" data-ydui-tab>
+			<div class="aui-myOrder-fix">
+				<ul class="tab-nav">
+					<li class="tab-nav-item tab-active"><a href="javascript:;">详细资料</a></li>
+					<li class="tab-nav-item"><a href="javascript:;">跟进记录</a></li>										
+				</ul>
+			</div>			
+			
+			
+<div class="tab-panel">		   
+    <div class="tab-panel-item tab-active">		
+        <section class="aui-flexView id="scrollBg">      	  	
+            <div class="container">	  	
+		        <div class="cardexplain">			 
+			        <div class="history">
+				        <div class="history-date">
+					        <ul id='memoDetail'>
+						       <!--<a><h2 class="first first1" ></h2></a>-->					
+						        <li class="green bounceInDown">
+							        <!--<h3 style="color:#38aae1;margin-left: 10px;display: flex;">
+								        <span style="color:#38aae1;">提交时间：2019-01-04 13:54:35</span>
+								        <span style="color:#38aae1;margin: 0px 0 0 10px;">刘国奇</span>
+								        <div class="clr">羿</div>
+							        </h3>-->
+							        <dl style="margin-left: 10px;">
+								        <dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;">甲方/乙方：</dt>
+								            <li class="green bounceInDown" id="party">
+									                        
+								            </li>								       								        
+							        </dl>							
+						        </li>
+										<li class="green bounceInDown">
+											<dl style="margin-left: 10px;">
+												<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;">合同相对方：</dt>
+														<li class="green bounceInDown" id="xiangdui">
+																			
+														</li> 							       								        
+											</dl>							
+										</li>
+						        <li class="green bounceInDown">
+							        <dl style="margin-left: 10px;">
+								        <dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;">目的：</dt>
+								            <li class="green bounceInDown" id="goal">
+									                     
+								            </li> 							       								        
+							        </dl>							
+						        </li>
+						        <li class="green bounceInDown">
+							        <dl style="margin-left: 10px;">
+							            <dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;">人民法院/仲裁机构：</dt>
+								            <li class="green bounceInDown" id="management">
+									                       
+								            </li>
+							        </dl>
+						        </li>
+						        <li class="green bounceInDown">
+							        <dl style="margin-left: 10px;">   
+							            <dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;">是否需要对方承担费用：</dt>
+								            <li class="green bounceInDown" id="cost">
+									                      
+								            </li>
+							        </dl> 
+						        </li>
+						        <li class="green bounceInDown">
+							        <dl style="margin-left: 10px;">    
+							            <dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;">违约金比例：</dt>
+								            <li class="green bounceInDown" id="defaultrate">
+									                        
+								            </li>
+							        </dl>
+						        </li>
+						        <li class="green bounceInDown">
+							        <dl style="margin-left: 10px;">
+							            <dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;">期望完成时间：</dt>
+								            <li class="green bounceInDown" id="expecttime">
+									                       
+								            </li>
+								    </dl>
+						        </li>
+										<li class="green bounceInDown">
+											<dl style="margin-left: 10px;">
+													<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;">与律师对接联系人：</dt>
+														<li class="green bounceInDown" id="lianxiren">
+																				
+														</li>
+										</dl>
+										</li>
+										<li class="green bounceInDown">
+											<dl style="margin-left: 10px;">
+													<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;">与律师对接联系人的联系方式：</dt>
+														<li class="green bounceInDown" id="lianxidianhua">
+																				
+														</li>
+										</dl>
+										</li>
+						        <li class="green bounceInDown">
+							        <dl style="margin-left: 10px;">   
+							            <dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;">其他：</dt>
+								            <li class="green bounceInDown" id="otherscript">
+									       
+								            </li>
+                                   </dl>
+						        </li>
+						        <li class="green bounceInDown">
+							        <dl style="margin-left: 10px;">   
+							            <dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;margin-bottom: 10px;">已上传附件：</dt>
+								            <li class="green bounceInDown" id="yscfj">
+								        	<table id="fjtable">  
+                                            </table>
+								            </li>
+								    </dl>
+						        </li>
+						        
+        	                    
+					        </ul>
+				        </div>
+			        </div>
+		        </div>
+	        </div>
+        </section> 					
+    </div>
+		
+	<div class="tab-panel-item">
+		<section class="aui-flexView">         	         	
+            <div class="container">	  	
+		        <div class="cardexplain">			 
+			        <div class="history">
+				        <div class="history-date">
+					        <ul id="memoPro">
+					        	 	
+					        	 
+					        </ul>
+			         	</div>
+			        </div>
+		        </div>
+	        </div>
+        </section> 
+  </div>
+</div>
+</div>
+</section>
+     
+    <script type="text/javascript" src="../../assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../js/aui.js"></script>
+	<script type="text/javascript" src="../../js/common.js"></script>
+	<script type="text/javascript">
+		var companyid;
+		var htscid;
+		var functionName;
+		var ifLawyerFiertime;
+		var randomnumber;
+		var state;
+		var pfStr;//评分div
+		var pjStr;//评价div
+		var LawyerName;
+		var companyName;
+		var tnayifang;
+		var status;
+		var star;
+		var usertype;
+		var userid;
+		
+		mui.plusReady(function() {
+			var storage=window.localStorage;
+			usertype=storage.usertype;
+			userid=storage.userid;
+			var self = plus.webview.currentWebview();
+			htscid = self.htscid;
+			state=self.status;
+			star=self.star;
+			// alert(state);
+			status=self.statusStr;
+			LawyerName=self.LawyerName; 
+			companyName=self.companyName;
+			// tnayifang=self.tnayifang;
+			document.getElementById('NolongCompanyName').innerHTML=companyName;
+			var titStr='<span id="titLawyer">'+LawyerName+'</span>';
+			$('#titCompanyName').append(titStr);
+			document.getElementById('titstatus').innerHTML="状态:"+status;
+			// alert(htscid);
+			functionName=self.functionName;
+			// alert('htscid:'+htscid);
+			requestDetailInfor(htscid);
+			requestDetailPro(htscid);
+			// alert('functiongname'+functionName);
+// 			alert('ifLawyerFiertime'+ifLawyerFiertime);
+			if(usertype=='lawyer'&&state<60&&star!=2){
+				TlawyeraddDistribute();
+				}
+			else if(usertype=='admin'&&state<60){//管理员分配三星律师
+				// alert(state);
+				adminaddDistribute();
+			}
+		});
+		window.onload=function(){
+        randomnumber=generateRandom();
+				// alert('randomnumber'+randomnumber);
+    };
+		//生成随机数
+    function generateRandom() {
+    	
+        var date = new Date();
+        var seperator1 = "-";
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var strDate = date.getDate();
+        var strHours = date.getHours();
+        var strMinutes = date.getMinutes();
+        var strSeconds = date.getSeconds();
+        
+        
+        if (month >= 1 && month <= 9) {
+            month = "0" + month;
+        }
+        if (strDate >= 0 && strDate <= 9) {
+            strDate = "0" + strDate;
+        }
+        
+        if (strHours >= 0 && strHours <= 9) {
+        	strHours = "0" + strHours;
+        }
+        
+        if (strMinutes >= 0 && strMinutes <= 9) {
+        	strMinutes = "0" + strMinutes;
+        }
+        
+        if (strSeconds >= 0 && strSeconds <= 9) {
+        	strSeconds = "0" + strSeconds;
+        }
+                        
+       var currentdate = parseInt(year+''+month+''+strDate+''+strHours+''+strMinutes+''+strSeconds);
+
+       return currentdate+Math.round(Math.random()*100000);
+                 
+    }
+		//起草详情
+		function requestDetailInfor (htscid) {
+			// alert(htscid);
+			$.ajax({
+			url: 'http://121.42.29.124:8180/Goode/Apihetsc/HetscCaseAndFj',
+		    timeout: 30000,	
+			data:{hetscid:htscid},			
+		    type: 'GET',
+		    dataType: "json", 
+				async: false,
+		    success:function(data) {
+					// alert("hh");
+					if(data.length>0){
+					companyid = data[0].companyid;
+		    	var party=document.getElementById('party');
+					var xiangdui=document.getElementById('xiangdui');
+		    	var goal=document.getElementById('goal');
+		    	var management=document.getElementById('management');
+		    	var cost=document.getElementById('cost');
+		    	var defaultrate=document.getElementById('defaultrate');
+		      var otherscript=document.getElementById('otherscript');
+		      var expecttime=document.getElementById('expecttime');
+					var lianxidianhua=document.getElementById('lianxidianhua');
+					var lianxiren=document.getElementById('lianxiren');
+		    	party.innerHTML=data[0].party;
+		    	goal.innerHTML=data[0].goal;
+		    	management.innerHTML=data[0].management;
+		    	cost.innerHTML=data[0].cost;
+		    	defaultrate.innerHTML=data[0].defaultrate;
+		    	otherscript.innerHTML=data[0].otherscript;
+		    	expecttime.innerHTML=data[0].expecttime;
+					xiangdui.innerHTML=data[0].xiangduifang;
+					lianxidianhua.innerHTML=data[0].lianxidianhua;
+					lianxiren.innerHTML=data[0].lianxiren;
+		    	for(var i=0;i<data.length;i++){
+		    		var fjstr='';
+						if(data[i].hetscfjid!=null){
+		    		fjstr='<tr>'+
+				        '<td style="width: 200px;"><i class="fa fa-file-'+fileName(data[i].showname)+'o fa-2x" id="fileLoad" style="width: 50px;"></i>'+data[i].showname+'</td>'+
+	                    '<td><a class="fjdownload" id="'+data[i].hetscfjid+'" download="'+data[i].showname+'" href="'+UploadUrl+data[i].filename+'">下载</a></td> '+
+			            '</tr>';
+									// alert(UploadUrl+data[i].filename);
+			        $('#fjtable').append(fjstr);
+						}
+		    	}
+				}
+				//已评分信息
+				if(state==70){
+				 pfStr='<li class="green bounceInDown">'+
+				           '<h3 style="color:#38aae1;margin-left: 10px;display: flex;">'+
+				 	         '<span style="color:#38aae1;">'+data[0].pfsj+'</span>'+
+				         	 '<span style="color:#38aae1;margin: 0px 0 0 10px;">评分时间</span>'+
+									 '</h3>'+
+							        '<dl style="margin-left: 10px;">'+   
+							            '<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;margin-bottom: 10px;">评分：</dt>'+
+								            '<li class="green bounceInDown" id="pj">';
+														if(data[0].lowerlawerpf==0.0){
+															pfStr+='负责律师工作量：修改8处级以上，故助理律师不得积分，负责律师得1积分';
+														}else if(data[0].lowerlawerpf==0.3){
+															pfStr+='负责律师工作量：修改4-7处，故助理律师得0.3积分，负责律师得0.7积分';
+														}else if(data[0].lowerlawerpf==0.7){
+															pfStr+='负责律师工作量：修改0-3处，故助理律师得0.7积分，负责律师得0.3积分';
+														}
+								           pfStr+= '</li>'+
+													'<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;margin-bottom: 10px;">评分补充说明：</dt>'+
+															'<li class="green bounceInDown" id="pjbcsm">'+data[0].pfbc+
+															'</li>'+
+								    '</dl>'+
+						        '</li>';
+				}
+				if(data[0].pjid!=null&&data[0].pjid!=''&&data[0].pjtime != ''&&data[0].pjtime != null){
+					var pjStarnum=data[0].rating;
+					pjStr='<li class="green bounceInDown">'+
+				           '<h3 style="color:#38aae1;margin-left: 10px;display: flex;">'+
+				 	         '<span style="color:#38aae1;">本次服务于</span>'+
+				         	 '<span style="color:#38aae1;margin: 5px 0 0 10px;">'+data[0].pjtime+'</span>'+
+									 '<span style="color:#38aae1;margin: 3px 0 0 10px;">评价</span>'+
+									 '</h3>'+
+									 	'<dl style="margin-left: 10px;">'+   
+									 			'<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;margin-bottom: 10px;">总体评价：</dt>'+
+									 				'<li class="green bounceInDown" id="pjStar">';
+													for(var i=0;i<pjStarnum;i++){
+									 					pjStr+='<i class="mui-icon mui-icon-star-filled"></i>';
+														}
+													for(var i=0;i<5-pjStarnum;i++){
+									 					pjStr+='<i class="mui-icon mui-icon-star"></i>';
+														}
+									 pjStr+='</li>'+
+									 		  	'<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;margin-bottom: 10px;">业务处理：</dt>'+
+									 				'<li class="green bounceInDown" id="ywpj">'+
+									 						'<div class="mui-card">'+
+									 							'<form class="mui-input-group">';
+																if(data[0].pj1=='10'){
+																	pjStr+='<div class="mui-input-row mui-checkbox mui-left" >'+
+									 									'<label>服务态度好</label>'+
+									 									'<input name="checkbox" value="Item 1" type="checkbox" disabled="disabled" checked="checked">'+
+									 								'</div>';
+																}else if(data[0].pj1!='10'){
+																	pjStr+='<div class="mui-input-row mui-checkbox mui-left mui-disabled">'+
+																		'<label>服务态度好</label>'+
+																		'<input name="checkbox" value="Item 1" type="checkbox" disabled="disabled">'+
+																	'</div>';
+																}
+									 							if(data[0].pj2=='10'){
+									 								pjStr+='<div class="mui-input-row mui-checkbox mui-left" >'+
+									 									'<label>及时处理</label>'+
+									 									'<input name="checkbox" value="Item 2" type="checkbox" disabled="disabled" checked="checked">'+
+									 								'</div>';
+									 							}else if(data[0].pj2!='10'){
+									 								pjStr+='<div class="mui-input-row mui-checkbox mui-left mui-disabled">'+
+									 									'<label>及时处理</label>'+
+									 									'<input name="checkbox" value="Item 2" type="checkbox" disabled="disabled">'+
+									 								'</div>';
+									 							}
+																if(data[0].pj3=='10'){
+																	pjStr+='<div class="mui-input-row mui-checkbox mui-left" >'+
+																		'<label>专业性强</label>'+
+																		'<input name="checkbox" value="Item 3" type="checkbox" disabled="disabled" checked="checked">'+
+																	'</div>';
+																}else if(data[0].pj3!='10'){
+																	pjStr+='<div class="mui-input-row mui-checkbox mui-left mui-disabled">'+
+																		'<label>专业性强</label>'+
+																		'<input name="checkbox" value="Item 3" type="checkbox" disabled="disabled">'+
+																	'</div>';
+																}	
+																if(data[0].pj4=='10'){
+																	pjStr+='<div class="mui-input-row mui-checkbox mui-left" >'+
+																		'<label>文档格式规范</label>'+
+																		'<input name="checkbox" value="Item 4" type="checkbox" disabled="disabled" checked="checked">'+
+																	'</div>';
+																}else if(data[0].pj4!='10'){
+																	pjStr+='<div class="mui-input-row mui-checkbox mui-left mui-disabled">'+
+																		'<label>文档格式规范</label>'+
+																		'<input name="checkbox" value="Item 4" type="checkbox" disabled="disabled">'+
+																	'</div>';
+																}	
+																if(data[0].pj5=='10'){
+																	pjStr+='<div class="mui-input-row mui-checkbox mui-left" >'+
+																		'<label>思路清晰</label>'+
+																		'<input name="checkbox" value="Item 5" type="checkbox" disabled="disabled" checked="checked">'+
+																	'</div>';
+																}else if(data[0].pj5!='10'){
+																	pjStr+='<div class="mui-input-row mui-checkbox mui-left mui-disabled">'+
+																		'<label>思路清晰</label>'+
+																		'<input name="checkbox" value="Item 5" type="checkbox" disabled="disabled">'+
+																	'</div>';
+																}	
+									 							pjStr+='</form>'+
+									 						'</div>'+
+									 				'</li>'+
+									 			'<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;margin-bottom: 10px;">其他：</dt>';
+												  if(data[0].other!=null&&data[0].other!='')
+									 				pjStr+='<li class="green bounceInDown" id="pftext">'+data[0].other;
+													else
+													pjStr+='<li class="green bounceInDown" id="pftext">';
+									 				pjStr+='</li>'+
+									 '</dl>'+
+									 '</li>';
+				}
+				if(~status.indexOf("默认好评")){
+					pjStr='<li class="green bounceInDown">'+
+									'<h3 style="color:#38aae1;margin-left: 10px;display: flex;">'+
+									'<span style="color:#38aae1;">超过三天未评价，系统默认好评</span>'+
+									'</h3>'+
+										'<dl style="margin-left: 10px;">'+   
+												'<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;margin-bottom: 10px;">总体评价：</dt>'+
+													'<li class="green bounceInDown" id="pjStar">';
+													for(var i=0;i<5;i++){
+														pjStr+='<i class="mui-icon mui-icon-star-filled"></i>';
+														}
+									pjStr+='</li>'+
+													'<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;margin-bottom: 10px;">业务处理：</dt>'+
+													'<li class="green bounceInDown" id="ywpj">'+
+															'<div class="mui-card">'+
+																'<form class="mui-input-group">';
+																	pjStr+='<div class="mui-input-row mui-checkbox mui-left" >'+
+																		'<label>服务态度好</label>'+
+																		'<input name="checkbox" value="Item 1" type="checkbox" disabled="disabled" checked="checked">'+
+																	'</div>';
+																	pjStr+='<div class="mui-input-row mui-checkbox mui-left" >'+
+																		'<label>及时处理</label>'+
+																		'<input name="checkbox" value="Item 2" type="checkbox" disabled="disabled" checked="checked">'+
+																	'</div>';
+																	pjStr+='<div class="mui-input-row mui-checkbox mui-left" >'+
+																		'<label>专业性强</label>'+
+																		'<input name="checkbox" value="Item 3" type="checkbox" disabled="disabled" checked="checked">'+
+																	'</div>';
+																	pjStr+='<div class="mui-input-row mui-checkbox mui-left" >'+
+																		'<label>文档格式规范</label>'+
+																		'<input name="checkbox" value="Item 4" type="checkbox" disabled="disabled" checked="checked">'+
+																	'</div>';
+																	pjStr+='<div class="mui-input-row mui-checkbox mui-left" >'+
+																		'<label>思路清晰</label>'+
+																		'<input name="checkbox" value="Item 5" type="checkbox" disabled="disabled" checked="checked">'+
+																	'</div>';
+																pjStr+='</form>'+
+															'</div>'+
+													'</li>'+
+												'<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;margin-bottom: 10px;">其他：</dt>'+
+													'<li class="green bounceInDown" id="pftext">'+"已默认好评"+
+													'</li>'+
+									'</dl>'+
+									'</li>';
+				}
+		    },
+		    error:function(XMLHttpRequest, textStatus, errorThrown){
+		    	//alert(errorThrown)
+		    	//alert(url)
+					// alert(htscid);
+				alert("ERRor");
+			}
+		    });
+		};
+    //案件流程    
+		function requestDetailPro (htscid) {
+        	$.ajax({
+			url: 'http://121.42.29.124:8180/Goode/Apihetsc/HetscMemo',
+		    timeout: 30000,	
+			data:{hetscid:htscid},			
+		    type: 'GET',
+		    dataType: "json", 
+				async:false,
+		    success:function(data) {
+		    	var recordStr='';
+		    	var fujianStr='';
+		    	if(data.length==0){
+		    		ifLawyerFiertime=1;
+						// alert(ifLawyerFiertime);
+		    	}
+					else{
+						ifLawyerFiertime=0;
+						// alert(ifLawyerFiertime);
+					}
+		    	for(var i=0;i<data.length;i++){
+					
+						recordStr='<li class="green bounceInDown">'+
+												'<h3 style="color:#38aae1;margin-left: 10px;display: flex;">'+
+													'<span style="color:#38aae1;">'+data[i].memodate+'</span>'+
+													'<span style="color:#38aae1;margin: 0px 0 0 10px;">'+data[i].lawyername+'</span>';
+												//state还没传
+						if(state>=60&&i==data.length-1){
+							recordStr+='<span style="color:red;margin: 0px 0 0 10px;">已结案</span>';
+            }			
+						recordStr+='</h3>';
+						recordStr+='<dl style="margin-left: 10px;">'+
+								        '<div class="xiangqing">'+
+								            '<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;">详情：</dt>'+
+								            '<li class="green bounceInDown">'+data[i].casememo+							                        
+								            '</li>'+
+								        '</div>'+
+							       	'<div class="fujian" >'+
+							       	'<dt class="hfinfo" date="17369" style="border-bottom:1px solid #D9D9D9;margin-bottom: 10px;">附件：</dt>'+
+							        	'<li class="green bounceInDown">'+
+							        	    '<table id="'+data[i].randomnumber+'fujian">'+
+							        	    '</table>'+
+							        	'</li>'+
+								    '</div>'+
+							        '</dl>'+							
+						        '</li>';
+						if(usertype!='client'){
+				    $('#memoPro').append(recordStr);
+						}else if(usertype=='client'&&state>=60&&i==data.length-1){
+							$('#memoPro').append(recordStr);
+						}
+		    		for(var j=0;j<data[i].fujian.length;j++){
+							if(data[i].fujian[j].id!=null){
+							fujianStr='<tr>'+
+								'<td style="width: 200px;"><i class="fa fa-file-'+fileName(data[i].fujian[j].showname)+'o fa-2x" id="fileLoad" style="width: 50px;"></i>'+data[i].fujian[j].showname+'</td>'+
+								'<td><a class="fjdownload" id="'+data[i].fujian[j].id+'"download="'+data[i].fujian[j].showname+'" href="'+UploadUrl+data[i].fujian[j].filename+'">下载</a></td>'+ 
+						    '</tr>';
+								// alert(UploadUrl+data[i].fujian[j].filename);
+						    $('#'+data[i].fujian[j].randomnumber+'fujian').append(fujianStr);
+						    fujianStr='';
+								}
+		    		}
+		    		recordStr='';
+		    	}
+					if(usertype!='client'){
+					$('#memoPro').append(pfStr);
+					pfStr='';
+					}
+					
+					$('#memoPro').append(pjStr);
+					pjStr='';
+					
+		    },
+		    error:function(XMLHttpRequest, textStatus, errorThrown){
+		    	//alert(errorThrown)
+		    	//alert(url)
+				alert("ERRor");
+			}
+		    });
+        };
+		//获得附件的文件类型
+		function fileName (showname) {
+			var str=new Array();
+			if(showname!=''&&showname!=null){
+			str=showname.split('.');
+			var length=str.length;
+			if(~str[length-1].indexOf('zip')){
+				return('zip-');
+			}else if(~str[length-1].indexOf('mp4')){
+				return('video-');
+			}else if(~str[length-1].indexOf('doc')){
+				return('word-');
+			}else if(~str[length-1].indexOf('pdf')){
+				return('pdf-');
+			}else if(~str[length-1].indexOf('ppt')){
+				return('powerpoint-');
+			}else if(~str[length-1].indexOf('png')||~str[length-1].indexOf('jpg')){
+				return('image-');
+			}else if(~str[length-1].indexOf('xls')){
+				return('excel-');
+			}else{
+				return('');
+			}
+			}
+			return('');
+		};
+		//下载上传按钮
+// 		mui('.tab-panel').on('tap','a',function  () {
+// 			var functionName=this.getAttribute('class');
+// 		
+// 			if(~functionName.indexOf('fjdownload')){
+// 				var fjid=this.getAttribute('id');
+// 				alert(fjid);
+// 				fjdownload(fjid);
+// 			}else if(~functionName.indexOf('fjupload')){
+// 				fjupload();
+// 			}else if(~functionName.indexOf('fjdelete')){
+// 				fjdelete();
+// 			}
+// 		});
+		//上传文件(只有三星律师需要上传文件)
+		function fjupload () {
+			 var mypic = document.getElementById('inputFile').files[0];
+       if(mypic.size==0){
+    	   alert("未选择上传文件")
+       }
+			 // alert(mypic.size);
+       var upfile= document.getElementById('inputFile').value.split("\\")
+       var filename=upfile[upfile.length - 1]
+			 
+        //创建一个FormData空对象，然后使用append方法添加key/value
+        var fd = new FormData();
+        fd.append("myhead",mypic);
+        // fd.append("companyid",companyid);
+				
+        var xhr = new XMLHttpRequest();        
+        xhr.onreadystatechange = function(){
+					// alert(xhr.readyState);
+            if(xhr.readyState==4 && xhr.status==200){
+            	// alert('over!');
+            	//返回上传状态的提示
+            	var json=JSON.parse(xhr.responseText)
+                alert(json.msg);
+  	           //将已上传内容 显示在下边
+            	var html = document.getElementById("alreayUpload").innerHTML;
+            	 var uploaded =  document.getElementById('alreayUpload');
+            	 uploaded.innerHTML =html+ '<tr id="'+json.insert+'">'+
+             		'<td>'+
+             		filename+
+                 	'</td>'+
+             		'<td>'+
+             		'上传成功'+
+                 	'</td>'+
+             		'<td>'+
+             		'<a onclick="fileDelete('+json.insert+')">删除</a>'+
+                 	'</td>'+
+            		'</tr>';
+            }
+						// alert('over');
+        }
+
+        //侦查当前附件上传情况
+        xhr.upload.onprogress = function(evt){
+            //侦查附件上传情况
+            //通过事件对象侦查
+            //该匿名函数表达式大概0.1秒执行一次
+        
+        var loaded = evt.loaded;//已经上传大小情况
+        var tot = evt.total;//附件总大小
+        var per = Math.floor(100*loaded/tot);  //已经上传的百分比
+        var son =  document.getElementById('son');
+        son.innerHTML = per + "%";
+        son.style.width = per + "%";
+        }
+
+        xhr.open("post","http://121.42.29.124:8180/Goode/Apihetsc/uploadFilel?randomnumber="+randomnumber+"&filename="+filename+"&caseid="+htscid+"&companyid="+companyid+"&userid="+userid);
+        xhr.send(fd);			
+		};
+		//下载文件
+		function fjdownload(id) {
+			$.ajax({
+			url: 'http://121.42.29.124:8180/Goode/Apihetsc/downloadFile',
+		    timeout: 30000,	
+			data:{hetscfjid:id},			
+		    type: 'GET',
+		    dataType: "json", 
+		    success:function(data) {
+		    	mui.toast('下载成功');
+		    },
+		    error:function(XMLHttpRequest, textStatus, errorThrown){
+		    	//alert(errorThrown)
+		    	//alert(url)
+				alert("ERRor");
+			}
+		    });
+		};
+		//删除文件
+		function fileDelete(id){
+			//var id=this.getAttribute('id');
+			$.ajax({
+			url: 'http://121.42.29.124:8180/Goode/Apihetsc/deleteFilel',
+				timeout: 30000,	
+			data:{
+				hetscfjid:id,
+				},			
+				type: 'GET',
+				dataType: "json", 
+				success:function(data) {
+					mui.toast('删除成功');
+				},
+				error:function(XMLHttpRequest, textStatus, errorThrown){
+					//alert(errorThrown)
+					//alert(url)
+				alert("ERRor");
+			}
+			});
+		};
+	  //显示文件名字
+		function selectFile () {
+		    var mypic = document.getElementById('inputFile').files[0];
+            if(mypic.size==0){
+     	        alert("未选择上传文件");
+            }
+            fileNameShow.innerHTML=mypic.name;
+          
+		};
+		//-------------------------------------------管理员分配三星律师------------------------------------------
+		function adminaddDistribute () {
+			$.ajax({
+			url: 'http://121.42.29.124:8180/Goode/Apihetsc/HetscByIdg',
+		    timeout: 30000,	
+			data:{hetscid:htscid},			
+		    type: 'GET',
+		    dataType: "json", 
+		    success:function(data) {
+		    	var DistriStr='<li class="green bounceInDown" id="hetscDeal">'+
+						        	'<h3 style="color:#38aae1;margin-left: 10px;display: flex;">'+
+								        '<span style="color:#38aae1;">分配律师</span>'+
+							        '</h3>'+
+						        	'<dl style="margin-left: 10px;">'+
+						                '<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;margin-bottom: 10px;">请选择律师：</dt>'+
+						                '<select class="mui-btn mui-btn-block " id="selectLawyer">';
+				for(var i=0;i<data.length;i++){
+				                     	    DistriStr +='<option value="'+data[i].id+'">'+data[i].name+'</option>';
+					                       }
+				                       DistriStr +=' </select>'+
+								        '<center><button type="button" class="mui-btn mui-btn-primary" id="adminDisSure" onclick="adminDisSure()">确认分配律师</button></center>'+
+        	                        '</dl>'+
+        	                    '</li>';
+        	    $('#memoPro').append(DistriStr);
+		    },
+		    error:function(XMLHttpRequest, textStatus, errorThrown){
+		    	//alert(errorThrown);
+		    	//alert(url);
+				alert("ERRor");
+			}
+		    });
+		}
+		//确认分配
+	  function adminDisSure(){
+	    	var select = document.getElementById("selectLawyer"); 
+            var index = select.selectedIndex; 
+            var text = select.options[index].text; 
+            var lawyerid = select.options[index].value; 
+	    	$.ajax({
+			url: 'http://121.42.29.124:8180/Goode/Apihetsc/changeLawyer',
+		    timeout: 30000,	
+			data:{
+				hetscid:htscid,
+				lawyerid:lawyerid,
+			},			
+		    type: 'GET',
+		    dataType: "json", 
+		    success:function(data) {
+		    	mui.alert(data.msg);
+		    	mui.back();
+		    },
+		    error:function(XMLHttpRequest, textStatus, errorThrown){
+		    	//alert(errorThrown);
+		    	//alert(url);
+				alert("ERRor");
+			}
+		    });
+	    }
+	   
+				 
+		function addLawyerList(){
+			(function($, doc) {
+				
+				$.ready(function() {
+					//普通示例
+					var userPicker = new $.PopPicker();
+					userPicker.setData([{
+						value: 'ywj',
+						text: '董事长 叶文洁'
+					}, {
+						value: 'aaa',
+						text: '总经理 艾AA'
+					}, {
+						value: 'lj',
+						text: '罗辑'
+					}, {
+						value: 'ymt',
+						text: '云天明'
+					}, {
+						value: 'shq',
+						text: '史强'
+					}, {
+						value: 'zhbh',
+						text: '章北海'
+					}, {
+						value: 'zhy',
+						text: '庄颜'
+					}, {
+						value: 'gyf',
+						text: '关一帆'
+					}, {
+						value: 'zhz',
+						text: '智子'
+					}, {
+						value: 'gezh', 
+						text: '歌者'
+					}]);
+					var showUserPickerButton = doc.getElementById('showUserPicker');
+					var userResult = doc.getElementById('userResult');
+					showUserPickerButton.addEventListener('tap', function(event) {
+						userPicker.show(function(items) {
+							userResult.innerText = JSON.stringify(items[0]);
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+					
+				});
+			})(mui, document);
+		};
+	  //-------------------------------------------三星律师分配助理律师------------------------------------------
+		function TlawyeraddDistribute () {
+			$.ajax({
+			url: 'http://121.42.29.124:8180/Goode/Apihetsc/HetscByIdd',
+		    timeout: 30000,	
+			data:{hetscid:htscid,
+			userid:userid},			
+		    type: 'GET',
+				async:false,
+		    dataType: "json", 
+		    success:function(data) {
+		    	var DistriStr='<li class="green bounceInDown" id="hetscDeal">'+
+						        	'<h3 style="color:#38aae1;margin-left: 10px;display: flex;">'+
+								        '<span style="color:#38aae1;">分配律师</span>'+
+							        '</h3>'+
+						        	'<dl style="margin-left: 10px;">'+
+						                '<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;margin-bottom: 10px;">请写下要求：</dt>'+
+						                '<div class="mui-input-row" style="margin: 10px 5px;">'+
+					                        '<textarea id="textarea" rows="5" placeholder="具体处理描述" style="font-size: 12px;"></textarea>'+
+				                        '</div>'+
+				                        '<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;margin-bottom: 10px;">请选择助理律师：</dt>'+
+				                        '<select class="mui-btn mui-btn-block " id="selectTLawyer">';
+																// addLawyerList();
+				for(var i=0;i<data.length;i++){
+					 DistriStr +='<option value="'+data[i].id+'">'+data[i].name+'</option>';
+				}	                        
+				            DistriStr+= '</select>'+
+										'<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;margin-bottom: 10px;">期望助理完成时间：</dt>'+
+										'<input type="text" id="expecttimez"/>'+
+						                '<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;margin-bottom: 10px;">附件上传：</dt>'+
+						                            '<label title="上传文件" for="inputFile" >'+
+                                            '<input type="file" name="file" onchange="selectFile()" id="inputFile" style="display:none" />'+
+                                            '<a class="fa fa-upload fa-2x" style="margin-top:2px; margin-left:10px;">'+
+                                            '</a>'+
+        	                              '</label>'+
+        	                            '<div id="fileNameShow" style="width: 56%;display: inline-block;"></div>'+
+        	                            '<div id="uploadFilePro" style="width: 11%;display: inline-block;"><div id="son" style="display: inline-block;"></div></div>'+
+        	                            '<button class="fjupload" id="uploadfj" style="display: inline-block;" onclick="fjupload()">上传</button>'+
+        	                            '<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;margin-bottom: 10px;">已上传附件：</dt>'+
+        	                            '<li class="green bounceInDown" id="yscfj">'+
+								        	                  '<table id="alreayUpload">'+
+																								
+                                            '</table>'+
+								        '</li>'+
+								        '<center><button type="button" class="mui-btn mui-btn-primary" onclick="TlawyerDisSure()">提交</button></center>'+
+        	                        '</dl>'+
+        	                    '</li>';
+        	$('#memoPro').append(DistriStr);
+		    	
+		    },
+		    error:function(XMLHttpRequest, textStatus, errorThrown){
+		    	//alert(errorThrown);
+		    	//alert(url);
+				alert("ERRor");
+			}
+		    });
+		}
+		//确认分配
+	  function TlawyerDisSure(){
+	    	var select = document.getElementById("selectTLawyer");
+            var index = select.selectedIndex;
+            var text = select.options[index].text; 
+            var lawyerid = select.options[index].value; 
+            var casememo = $('#textarea').val();
+						// alert(index+' '+text+' '+lawyerid+' '+casememo);
+						var expecttimez=$('#expecttimez').val();
+	    	$.ajax({
+			url: 'http://121.42.29.124:8180/Goode/Apihetsc/Hetsclfpls',
+		    timeout: 30000,	
+			data:{
+				hetscid:htscid,
+				userid:userid,//userid
+				randomnumber:randomnumber,
+				casememo:casememo,
+				lowerlawerid:lawyerid,
+				expecttimez:expecttimez
+			},			
+		    type: 'GET',
+		    dataType: "json", 
+		    success:function(data) {
+		    	mui.alert(data.msg);
+		    	mui.back();
+		    },
+		    error:function(XMLHttpRequest, textStatus, errorThrown){
+		    	//alert(errorThrown);
+		    	//alert(url);
+				alert("ERRor");
+			}
+		    });
+	    };
+//		$("input[type='file']").change(function(){   
+//          var file = this.files[0];
+//          if (window.FileReader) {    
+//              var reader = new FileReader();    
+//              reader.readAsDataURL(file);    
+//              //监听文件读取结束后事件    
+//              reader.onloadend = function (e) {
+//                  alert(e.target.result);    //e.target.result就是最后的路径地址
+//              };    
+//          } 
+//      });
+	</script>
+	
+    </body>
+
+</html>

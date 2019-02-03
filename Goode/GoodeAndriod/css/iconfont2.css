@@ -1,0 +1,30 @@
+
+@font-face {font-family: "iconfont";
+ src:
+ url('../fonts/iconfont2.ttf') format('truetype');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shouyeguanli:before { content: "\e629"; } 
+
+.icon-wode:before { content: "\e62a"; }
+
+.icon-zhuceshenghe:before { content: "\e62d"; }
+
+.icon-shujv4:before { content: "\e635"; }
+
+.icon-shezhi:before { content: "\e63c"; }
+
+.icon-shujv3:before { content: "\e63f"; }
+
+.icon-shujv:before { content: "\e640"; }
+
+.icon-shujv2:before { content: "\e645"; }
+

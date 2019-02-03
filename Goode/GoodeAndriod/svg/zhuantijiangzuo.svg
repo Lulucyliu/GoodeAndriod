@@ -1,0 +1,30 @@
+<svg id="专题讲座" xmlns="http://www.w3.org/2000/svg" width="136" height="136" viewBox="0 0 136 136">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 24px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #fff;
+        font-family: "Microsoft YaHei";
+      }
+
+      .cls-2 {
+        font-size: 18px;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 4px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <text id="A" class="cls-1" x="44.8" y="77.6">A</text>
+  <text id="_" data-name="+" class="cls-2" x="59.167" y="68.643">+</text>
+  <path id="矩形_5_拷贝_3" data-name="矩形 5 拷贝 3" class="cls-3" d="M86.9,100H30V42a4,4,0,0,1,4-4h68a4,4,0,0,1,4,4v58H94.958"/>
+</svg>

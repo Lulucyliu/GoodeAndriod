@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="keywords" content="index">
+		<meta name="renderer" content="webkit">
+		<link rel="icon" type="image/png" href="assets/i/favicon.png">
+		<link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+		<meta name="apple-mobile-web-app-title" content="Amaze UI" />
+		<link rel="stylesheet" href="assets/css/amazeui.min.css" />
+		<link rel="stylesheet" href="assets/css/admin.css">
+		<link rel="stylesheet" href="assets/css/app.css">
+		<script src="js/mui.min.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/md5.js"></script>
+		<title></title>
+	</head>
+	<body data-type="login">
+
+  <div class="am-g myapp-login">
+	<div class="myapp-login-logo-block  tpl-login-max">
+		<div class="myapp-login-logo-text">
+			<div class="myapp-login-logo-text">
+				Goode<span> Login</span> <i class="am-icon-skyatlas"></i>
+				
+			</div>
+		</div>
+
+		<div class="login-font"> 
+			<i>Log In </i> & <span> Sign Up</span>
+		</div>
+		<div class="am-u-sm-10 login-am-center">
+			<form class="am-form">
+				<fieldset>
+					<div class="am-form-group">
+						<input type="text" class="" id="account" placeholder="输入账户">
+					</div>
+					<div class="am-form-group">
+						<input type="password" class="" id="password" placeholder="输入密码">
+					</div>
+					<p><button type="button" class="am-btn am-btn-default" id="login">登录</button></p>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/amazeui.min.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+	<!--script type="text/javascript" src="js/userInfo.js"></script-->
+
+<script type="text/javascript" charset="UTF-8">
+	mui.init({
+		// statusBarBackground: '#f7f7f7'
+	});
+
+				
+	
+	
+//mui.plusReady(function() {
+//	var wv = plus.webview.currentWebview();
+//      wv.setStyle({
+//          launchwebview: {
+//              display: 'none',
+//          }
+//      });
+//};
+		var account;
+		var password;
+    // var cid;
+		//mui.init({
+//			preloadPages: [{
+//				url: 'index.html',
+//				id: 'index.html'
+//			}]
+		//});
+		/*mui.plusReady(function() { //为测试方便，设置自动登录，
+		//console.log("ok");
+			//ready();
+			var isActive = localStorage.getItem('isActive');
+			account = localStorage.getItem('phoneNum');
+			setAccount(account);
+			if(isActive=="true") {
+				password = localStorage.getItem('passWord');
+				password = hex_md5(password);
+				request_login(account, password);
+			}
+		});*/
+		var accountText = document.getElementById('account');
+		var pwdText = document.getElementById('password');
+		var login = document.getElementById('login'); 
+		account=document.getElementById('account');
+		password=document.getElementById('password');
+		
+		//console.log("ok");
+		//console.log(document.getElementById('account'));
+
+		login.addEventListener('tap', function() {
+			getValues(); 
+ 			
+			saveValues(account, password);
+			//password = hex_md5(password);
+			//console.log("ok");
+			request_login(account, password);
+
+		}); 
+
+		//save账号密码
+		function saveValues(account, password) {
+			localStorage.setItem('account', account);
+			localStorage.setItem('password', password);
+			localStorage.setItem("isActive", "true");
+		}
+
+		//提示账号
+		function setAccount(paccout) {
+			accountText.value = paccout;
+		}
+		//得到账号密码中的值
+		function getValues() {
+			account = accountText.value;
+			password = pwdText.value;
+		}
+		
+		//登录请求  
+		function request_login(account, password) {
+//			//console.log("ok");
+//			alert(account);
+			console.log(account);
+			console.log(password);
+			var cid=plus.push.getClientInfo().clientid;
+			$.ajax({ 
+		    //url: 'http://api.map.baidu.com/location/ip?ak=ia6HfFL660Bvh43exmH9LrI6',   
+		    //url: 'http://118.24.8.104:8081/Goode/ApiLogin',   
+		    //url: 'http://localhost:8080/Goode/ApiLogin/findfunctions',
+		    //url: 'http://172.28.23.211:8080/Goode/ApiLogin/findfunctions',
+		    url: 'http://121.42.29.124:8180/Goode/ApiLogin',
+		    //url: 'http:118.24.8.104:8081/Goode/ApiLogin',
+		    timeout: 30000,				
+		    type: 'POST',
+		    data:{account:account,password:password,cid:cid},
+		    dataType: "jsonp", 
+		    success:function(data) {
+				var flag='';
+				flag=data.flag;
+				if(flag == '200') { 
+						//getUserInfo();
+//						var userinfm=new Array();
+//						var useridinfm=new Array();
+//						var userid='';
+//						userinfm=data.split(':');						
+//						useridinfm=userinfm[4].split(',');
+//						userid=useridinfm[0];
+//						alert(userid);
+                        var userid='';
+                        var usertype='';
+                        usertype=data.usertype;
+                        userid=data.userid;
+												var storage=window.localStorage;
+												storage.usertype=usertype;
+												storage.userid=userid;
+												storage.password=password;
+												storage.cid=cid;
+												 // alert(plus.push.getClientInfo().clientid);
+//						var indexPage = plus.webview.getWebviewById('about.html');
+//						mui.fire(indexPage, 'reload_data', {});
+						mui.openWindow({
+							url: 'index.html',
+							
+							id: 'index.html',
+							extras:{
+                                 userid:userid,
+                                 usertype:usertype,
+                            }
+						});
+					} else {
+						//console.log(data.flag);
+						mui.toast(data.msg);
+					}
+			
+		    },
+		    error:function(XMLHttpRequest, textStatus, errorThrown){
+		    	//alert(errorThrown)
+		    	//alert(url)
+				alert("ERRor")
+			}
+		    });
+		   
+//			mui.ajax('http://121.42.29.124:8081/Goode/ApiLogin', {
+//				data: {
+//					account: account,
+//					password: password,
+//				},
+//				dataType: 'jsonp',
+//				type: 'POST',
+//				timeout: 10000,
+//				//contentType: "application/json; charset=utf-8",
+//				//async:false,
+//				//cache:false,
+//				//headers: {
+//					//'Content-Type': 'application/x-www-form-urlencoded'
+//				//}, 
+//				success: function(data) {
+//					//alert("ok");
+//					//var d=json.parse(data);
+//					//console.log(data.flag);
+//					//console.log(d);
+//                  alert('aa');
+//                  var flag='';
+//					flag= data.substring(13,16);
+////                  flag=data.flag;
+//                  alert(flag);
+//					console.log(data);
+//					//alert(data.flag);
+//					if(flag == '200') { 
+//						//getUserInfo();
+//						plus.nativeUI.toast("登录成功");
+//						var userinfm=new Array();
+//						var useridinfm=new Array();
+//						var userid='';
+//						userinfm=data.split(':');						
+//						useridinfm=userinfm[4].split(',');
+//						userid=useridinfm[0];
+//						alert(userid);
+////                      var userid='';
+////                      userid=data.userid;
+////						var indexPage = plus.webview.getWebviewById('about.html');
+////						mui.fire(indexPage, 'reload_data', {});
+//						mui.openWindow({
+//							url: 'index.html',
+//							
+//							id: 'index.html',
+//							extras:{
+//                               userid:userid,
+//                          }
+//						});
+//					} else {
+//						//console.log(data.flag);
+//						mui.toast(data.msg);
+//					}
+//				},
+//				error: function(xhr, type, errorThrown) {
+//					//异常处理
+//					alert("error");
+//					console.log(type);
+//					mui.toast("网络异常");
+//				}
+//			});
+		};
+
+//		document.getElementById('forget').addEventListener('tap', function() {
+//			mui.openWindow({
+//				url: 'index.html',
+//				extras:{
+//                  data:
+//              }
+//			});
+//		})
+//		 
+       
+	</script>
+</html>

@@ -1,0 +1,16 @@
+<svg id="合同起草" xmlns="http://www.w3.org/2000/svg" width="136" height="136" viewBox="0 0 136 136">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 4px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="矩形_13" data-name="矩形 13" class="cls-1" d="M97.972,39.275l-4.688,4.691-6.251-6.255-0.781.782L92.5,44.748l0.127-.127-31.973,32V77h-6.63V70.361h0.379L91.721,33.019Z"/>
+  <path id="矩形_15" data-name="矩形 15" class="cls-1" d="M90.75,57H105v46H31V57H54.75"/>
+</svg>

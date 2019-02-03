@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/mui.indexedlist.css" rel="stylesheet" />
+		<link href="../../css/List.css" rel="stylesheet" />
+		<link href="../../css/pageStyle.css" rel="stylesheet" type="text/css" />
+		<script src="../../js/jquery.min.js"></script>
+		<style>
+			html,
+			body {
+				height: 100%;
+				overflow: hidden;
+			}
+			.mui-bar {
+				-webkit-box-shadow: none;
+				box-shadow: none;
+			}
+			.aui-order-fl{
+				font-size: 15px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<section class="aui-flexView">
+			<header class="aui-navBar aui-navBar-fixed">
+				<a href="javascript:;" class="aui-navBar-item">
+					<i class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></i>
+				</a>
+				<div class="aui-center">
+					<span class="aui-center-title">电话咨询</span>
+				</div>
+				<!-- <a href="javascript:;" class="aui-navBar-item">开发票 -->
+				</a>
+			</header>
+			<section class="aui-scrollView">
+				<div class="aui-order-title" id="mainLeftMenu">
+					<!-- <h2>已完成订单</h2> -->
+					<div class="aui-order-box">
+						<!-- <a href="javascript:void(0);" class="aui-well-item">
+							<div class="aui-well-item-bd">
+								<h3>合同向对方名称</h3>
+							</div>
+							<span class="aui-well-item-fr">未提交给律师</span>
+						</a> -->
+						<div id="selecthead">
+							<p class="aui-order-fl ">咨询方向：</p>
+							
+						</div>
+						<p class="aui-order-fl aui-order-address" id="dianhua">电话：</p>
+						<p class="aui-order-fl aui-order-door" id="discription">咨询介绍：</p>
+					</div>
+                        <center><h2 style="font-size: 20px;color: #000000;">顾问律师信息</h2></center>
+					<div class="aui-order-box">
+						<!-- <a href="javascript:void(0);" class="aui-well-item">
+							<div class="aui-well-item-bd">
+								<h3>合同向对方名称</h3>
+							</div>
+							<span class="aui-well-item-fr">未提交给律师</span>
+						</a> -->
+							<p class="aui-order-fl aui-order-door" id="name">顾问姓名：</p>
+						<p class="aui-order-fl aui-order-address" id="star">星级：</p>
+						<p class="aui-order-fl aui-order-address" id="certificate_number">执业证书号：</p>
+						<p class="aui-order-fl aui-order-door" id="skilled">擅长领域：</p>
+					</div>
+				</div>
+			</section>
+		</section>
+		<script src="../../js/mui.js"></script>
+		<script type="text/javascript">
+			var gongnengList = [];
+			mui.init();
+			mui.ready(function() {
+				//alert('ready');
+				var header = document.querySelector('header.mui-bar');
+				var list = document.getElementById('list');
+				//calc hieght
+				list.style.height = (document.body.offsetHeight) + 'px';
+				//create
+				window.indexedList = new mui.IndexedList(list);
+
+			});
+			window.onload = function() {
+				mui('#offCanvasSideScroll').scroll();
+			};
+			//得到index-menu的数据
+			var userid = '';
+			mui.plusReady(function() {
+				//得到登陆页面的参数
+				//			      alert(lawyerid);
+				//var lawyerid;
+				// var self = plus.webview.currentWebview();
+				var storage = window.localStorage;
+				userid = storage.userid;
+				sendRequest(userid);
+				var aniShow = "slide-in-right";
+				//关于backbutton和menubutton两个按键的说明，在iOS平台不存在，故需隐藏
+				if (!mui.os.android) {
+					var span = document.getElementById("android-only")
+					if (span) {
+						span.style.display = "none";
+					}
+				}
+
+				var subWebview = null,
+					template = null,
+					index = null;
+				//获得主页面webview引用；
+				index = plus.webview.currentWebview().opener();
+				var _self = plus.webview.currentWebview();
+				_self.drag({
+					direction: "left",
+					moveMode: "followFinger"
+				}, {
+					view: index,
+					moveMode: "follow"
+				}, function(e) {});
+
+			});
+
+			mui('.mui-indexed-list-inner').on('tap', '#ajia', function() {
+				//alert('go');
+				mui.openWindow({
+					url: 'company-details.html'
+				});
+			});
+			function showChange(){
+				var select = document.getElementById("selectTLawyer");
+				var index = select.selectedIndex;
+				var text = select.options[index].text; 
+				var gongneng = select.options[index].value; 
+				for(var i=0;i<gongnengList.length;i++){
+					if(gongnengList[i].id==gongneng){
+						$("#dianhua").append(gongnengList[i].dianhua);
+						$("#discription").append(gongnengList[i].discription);
+						$("#name").append(gongnengList[i].name);
+						$("#star").append(gongnengList[i].star);
+						$("#certificate_number").append(gongnengList[i].certificate_number);
+						$("#skilled").append(gongnengList[i].skilled);
+					}
+				}
+			}
+
+			function sendRequest(userid) {
+				//alert(lawyerid);
+				$.ajax({
+					//url: 'http://api.map.baidu.com/location/ip?ak=ia6HfFL660Bvh43exmH9LrI6',   
+					//url: 'http://118.24.8.104:8081/Goode/ApiLogin',   
+					//url: 'http://localhost:8080/Goode/ApiLogin/findfunctions',
+					url: 'http://121.42.29.124:8180/Goode/Apidianhzx/showDianhzxYH',
+					//url: 'http:118.24.8.104:8081/Goode/ApiLogin',
+					timeout: 30000,
+					data: {
+						userid: userid
+					},
+					type: 'GET',
+					dataType: "json",
+					success: function(data) {
+						//alert(data[0].companyid);
+
+						var flag = 0;
+						var DistriStr = '';
+
+						var detail = '';
+						DistriStr += '<select class="mui-btn mui-btn-block " id="selectTLawyer" onchange="showChange()" style="font-size:15px;">';
+						for (var i = 0; i < data.length; i++) {
+							//是一级菜单
+							gongnengList[i] = data[i];
+							
+							// addLawyerList();
+							DistriStr += '<option value="' + data[i].id + '" >' + data[i].gongneng + '</option>';
+							
+						}
+						DistriStr += '</select>'; 
+						// alert(DistriStr)
+						$("#selecthead").append(DistriStr);
+					},
+					error: function(XMLHttpRequest, textStatus, errorThrown) {
+						//alert(errorThrown)
+						//alert(url)
+						alert("ERRor")
+					}
+				});
+			};
+		</script>
+	</body>
+
+</html>

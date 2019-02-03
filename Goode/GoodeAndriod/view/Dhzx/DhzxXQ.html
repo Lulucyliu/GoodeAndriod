@@ -1,0 +1,456 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		 <!--<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>-->
+        <meta content="yes" name="apple-mobile-web-app-capable"/>
+        <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+        <meta content="telephone=no" name="format-detection"/>
+        <link href="../../css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="../../css/message.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/core.css">	
+	    <link rel="stylesheet" type="text/css" href="../../css/home.css">
+			<link href="../../css/List.css" rel="stylesheet"/>
+	    <link rel="stylesheet" type="text/css" href="../../font-awesome-4.7.0/css/font-awesome.css"/>
+		<link rel="stylesheet" type="text/css" href="../../font-awesome-4.7.0/css/font-awesome.min.css"/>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<script src="../../js/mui.picker.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.mui-icon-star{color: #B5B5B5;font-size: 30px;}
+			.mui-icon-star-filled{color: #FFB400;font-size: 30px;} 
+			/* ul{padding: 10px 0px;} */
+			.ywpj{display: -webkit-box;width: 100%;padding: 0 10px;} 
+			.ywpj a{-webkit-box-flex: 1;display: block;font-size: 15px;line-height: 30px;color: #000;}
+			.ywpj div{-webkit-box-flex: 2;text-align: right;}
+			#info{padding: 20px 10px;}
+		</style>
+	</head>
+	
+    <body style="background: #fff;">
+		<script src="../../js/mui.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../css/HtqcXQ.css"/>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">查看电话咨询记录</h1>
+	</header>
+    	
+    	<div class="tit">
+        	<div class="tita" id="titCompanyName">
+        		<div id="NolongCompanyName">
+        			
+        		</div> 
+        	</div>	
+        	<div class="titb" style="font-size: 16px;" id="titstatus">
+        		
+        	</div>
+        </div>
+        
+        
+        
+<section class="aui-myOrder-content">
+<div class="m-tab demo-small-pitch" data-ydui-tab>
+			<div class="aui-myOrder-fix">
+				<ul class="tab-nav">
+					<li class="tab-nav-item tab-active"><a href="javascript:;">详细资料</a></li>
+					<li class="tab-nav-item"><a href="javascript:;">跟进记录</a></li>										
+				</ul>
+			</div>			
+			
+			
+<div class="tab-panel">		   
+    <div class="tab-panel-item tab-active">		
+        <section class="aui-flexView id="scrollBg">      	  	
+            <div class="container">	  	
+		        <div class="cardexplain">			 
+			        <div class="history">
+				        <div class="history-date">
+					        <ul id='memoDetail'>
+						       <!--<a><h2 class="first first1" ></h2></a>-->					
+						        <li class="green bounceInDown">
+							        <!--<h3 style="color:#38aae1;margin-left: 10px;display: flex;">
+								        <span style="color:#38aae1;">提交时间：2019-01-04 13:54:35</span>
+								        <span style="color:#38aae1;margin: 0px 0 0 10px;">刘国奇</span>
+								        <div class="clr">羿</div>
+							        </h3>-->
+							        <dl style="margin-left: 10px;">
+								        <dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;">公司：</dt>
+								            <li class="green bounceInDown" id="company">
+									                        
+								            </li>								       								        
+							        </dl>							
+						        </li>
+										<li class="green bounceInDown">
+											<dl style="margin-left: 10px;">
+												<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;">咨询人：</dt>
+														<li class="green bounceInDown" id="represent">
+																			
+														</li> 							       								        
+											</dl>							
+										</li>
+										<li class="green bounceInDown">
+											<dl style="margin-left: 10px;">
+												<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;">联系电话：</dt>
+														<li class="green bounceInDown" id="telephone">
+																			
+														</li> 							       								        
+											</dl>							
+										</li>
+						        <li class="green bounceInDown">
+							        <dl style="margin-left: 10px;">
+								        <dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;">咨询方向：</dt>
+								            <li class="green bounceInDown" id="direction">
+									                     
+								            </li> 							       								        
+							        </dl>							
+						        </li>
+						        <li class="green bounceInDown">
+						        	<dl style="margin-left: 10px;">
+							            <dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;">咨询时间：</dt>
+								            <li class="green bounceInDown" id="zxtime">
+									                        
+								            </li>
+						            </dl>
+						        </li>
+						        <li class="green bounceInDown">
+						        	<dl style="margin-left: 10px;">
+							            <dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;">咨询内容：</dt>
+								            <li class="green bounceInDown" id="detail">
+									                      
+								            </li>
+							        </dl>
+						        </li>
+					        </ul>
+				        </div>
+			        </div>
+		        </div>
+	        </div>
+        </section> 					
+    </div>
+		
+	<div class="tab-panel-item">
+		<section class="aui-flexView">         	         	
+            <div class="container">	  	
+		        <div class="cardexplain">			 
+			        <div class="history">
+				        <div class="history-date">
+					        <ul id="memoPro" style="display:none;">
+					        	 <!--<a><h2 class="first first1" ></h2></a>-->					
+					        	 <li class="green bounceInDown">
+					        	 	<h3 style="color:#38aae1;margin-left: 10px;display: flex;">
+					        	 		<span style="color:#38aae1;">发送至企业</span>
+					        	 	</h3>
+					        	 	<dl style="margin-left: 10px;">
+					        	 		<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;">公司：</dt>
+					        	 			<li class="green bounceInDown" id="companyg">
+					        	 							
+					        	 			</li>								       								        
+					        	 	</dl>							
+					        	 </li>
+					        	 		<li class="green bounceInDown">
+					        	 			<dl style="margin-left: 10px;">
+					        	 				<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;">咨询人：</dt>
+					        	 						<li class="green bounceInDown" id="representg">
+					        	 											
+					        	 						</li> 							       								        
+					        	 			</dl>							
+					        	 		</li>
+					        	 		<li class="green bounceInDown">
+					        	 			<dl style="margin-left: 10px;">
+					        	 				<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;">联系电话：</dt>
+					        	 						<li class="green bounceInDown" id="telephoneg">
+					        	 											
+					        	 						</li> 							       								        
+					        	 			</dl>							
+					        	 		</li>
+					        	 		<li class="green bounceInDown">
+					        	 			<dl style="margin-left: 10px;">
+					        	 				<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;">咨询方向：</dt>
+					        	 						<li class="green bounceInDown" id="directiong">
+					        	 											
+					        	 						</li> 							       								        
+					        	 			</dl>							
+					        	 		</li>
+					        	 		<li class="green bounceInDown">
+					        	 			<dl style="margin-left: 10px;">
+					        	 					<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;">咨询时间：</dt>
+					        	 						<li class="green bounceInDown" id="zxtimeg">
+					        	 													
+					        	 						</li>
+					        	 				</dl>
+					        	 		</li>
+					        	 		<li class="green bounceInDown">
+					        	 			<dl style="margin-left: 10px;">
+					        	 					<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;">咨询内容：</dt>
+					        	 						<li class="green bounceInDown" id="detailg">
+					        	 												
+					        	 						</li>
+					        	 			</dl>
+					        	 		</li>
+					        </ul>
+			         	</div>
+			        </div>
+		        </div>
+	        </div>
+        </section> 
+  </div>
+</div>
+</div>
+</section>
+     
+    <script type="text/javascript" src="../../assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../js/aui.js"></script>
+	<script type="text/javascript" src="../../js/common.js"></script>
+	<script type="text/javascript">
+		var companyid;
+		var htqcid;
+		var functionName;
+		var ifLawyerFiertime;
+		var randomnumber;
+		var state;
+		var statustr;
+		var fsStr;//发送div
+		var pjStr;//评价div
+		var star;
+		var LawyerName;
+		var companyName;
+		var tnayifang;
+		var status;
+		var usertype;
+		var userid;
+		
+		mui.plusReady(function() {
+			var storage=window.localStorage;
+			usertype=storage.usertype;
+			userid=storage.userid;
+			// alert(usertype);
+			var self = plus.webview.currentWebview();
+			htqcid = self.htqcid;
+			state=self.status;
+			star=self.start;
+			// alert(state);
+			status=self.statusStr;
+			LawyerName=self.LawyerName;
+			companyName=self.companyName;
+			// tnayifang=self.tnayifang;
+			document.getElementById('NolongCompanyName').innerHTML=companyName;
+			var titStr='<span id="titLawyer">'+LawyerName+'</span>';
+			$('#titCompanyName').append(titStr);
+			document.getElementById('titstatus').innerHTML="状态:"+status;
+			// alert(htqcid);
+			functionName=self.functionName;
+			// alert('htqcid:'+htqcid);
+			requestDetailInfor(htqcid);
+			});
+			// alert('functiongname'+functionName);
+// 			alert('ifLawyerFiertime'+ifLawyerFiertime);
+// 			if(functionName=='deal'&&ifLawyerFiertime==0){
+// 			
+// 			}
+// 			else if(functionName=='deal'&&ifLawyerFiertime==1){//三星律师分配助理律师
+// 			// alert('我在三星分配');
+// 				TlawyeraddDistribute();
+// 			}
+		window.onload=function(){
+				// alert('randomnumber'+randomnumber);
+    };
+	
+		//起草详情
+		function requestDetailInfor (htqcid) {
+			$.ajax({
+			url: 'http://121.42.29.124:8180/Goode/Apidianhzx/showHd',
+		    timeout: 30000,	
+			data:{dianhzxjlid:htqcid},			
+		    type: 'GET',
+		    dataType: "json", 
+				async: false,
+		    success:function(data) {
+		    	var company=document.getElementById('company');
+					var detail=document.getElementById('detail');
+				var telephone=document.getElementById('telephone');
+		    	var zxtime=document.getElementById('zxtime');
+		    	var direction=document.getElementById('direction');
+		    	var represent=document.getElementById('represent');
+				company.innerHTML=data.company_name;
+				// alert(data);
+		    	telephone.innerHTML=data.telephone;
+				zxtime.innerHTML=data.zxtime;
+		    	detail.innerHTML=data.detail;
+					direction.innerHTML=data.direction;
+		    	represent.innerHTML=data.represent;
+				// alert(state);
+				if(state=='70'){
+					// alert("hhh");
+						var companyg=document.getElementById('companyg');
+						var detailg=document.getElementById('detailg');
+					var telephoneg=document.getElementById('telephoneg');
+						var zxtimeg=document.getElementById('zxtimeg');
+						var directiong=document.getElementById('directiong');
+						var representg=document.getElementById('representg');
+					var lawsuitdiv=document.getElementById("memoPro");
+			       	lawsuitdiv.style.display = "block";
+					zxtimeg.innerHTML=data.zxtimeg;
+					telephoneg.innerHTML=data.telephone;
+					directiong.innerHTML=data.directiong;
+					detailg.innerHTML=data.detail;
+					companyg.innerHTML=data.companynameg;
+					representg.innerHTML=data.representg;
+				}
+				//已评分信息
+				if(data.pjid!=null&&data.pjid!=''&&data.pjtime != ''&&data.pjtime != null){
+					var pjStarnum=data.rating;
+					pjStr='<li class="green bounceInDown">'+
+				           '<h3 style="color:#38aae1;margin-left: 10px;display: flex;">'+
+				 	         '<span style="color:#38aae1;">本次服务于</span>'+
+				         	 '<span style="color:#38aae1;margin: 5px 0 0 10px;">'+data.pjtime+'</span>'+
+									 '<span style="color:#38aae1;margin: 3px 0 0 10px;">评价</span>'+
+									 '</h3>'+
+									 	'<dl style="margin-left: 10px;">'+   
+									 			'<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;margin-bottom: 10px;">总体评价：</dt>'+
+									 				'<li class="green bounceInDown" id="pjStar">';
+													for(var i=0;i<pjStarnum;i++){
+									 					pjStr+='<i class="mui-icon mui-icon-star-filled"></i>';
+														}
+													for(var i=0;i<5-pjStarnum;i++){
+									 					pjStr+='<i class="mui-icon mui-icon-star"></i>';
+														}
+									 pjStr+='</li>'+
+									 		  	'<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;margin-bottom: 10px;">业务处理：</dt>'+
+									 				'<li class="green bounceInDown" id="ywpj">'+
+									 						'<div class="mui-card">'+
+									 							'<form class="mui-input-group">';
+																if(data.pj1=='10'){
+																	pjStr+='<div class="mui-input-row mui-checkbox mui-left" >'+
+									 									'<label>服务态度好</label>'+
+									 									'<input name="checkbox" value="Item 1" type="checkbox" disabled="disabled" checked="checked">'+
+									 								'</div>';
+																}else if(data.pj1!='10'){
+																	pjStr+='<div class="mui-input-row mui-checkbox mui-left mui-disabled">'+
+																		'<label>服务态度好</label>'+
+																		'<input name="checkbox" value="Item 1" type="checkbox" disabled="disabled">'+
+																	'</div>';
+																}
+									 							if(data.pj2=='10'){
+									 								pjStr+='<div class="mui-input-row mui-checkbox mui-left" >'+
+									 									'<label>及时处理</label>'+
+									 									'<input name="checkbox" value="Item 2" type="checkbox" disabled="disabled" checked="checked">'+
+									 								'</div>';
+									 							}else if(data.pj2!='10'){
+									 								pjStr+='<div class="mui-input-row mui-checkbox mui-left mui-disabled">'+
+									 									'<label>及时处理</label>'+
+									 									'<input name="checkbox" value="Item 2" type="checkbox" disabled="disabled">'+
+									 								'</div>';
+									 							}
+																if(data.pj3=='10'){
+																	pjStr+='<div class="mui-input-row mui-checkbox mui-left" >'+
+																		'<label>专业性强</label>'+
+																		'<input name="checkbox" value="Item 3" type="checkbox" disabled="disabled" checked="checked">'+
+																	'</div>';
+																}else if(data.pj3!='10'){
+																	pjStr+='<div class="mui-input-row mui-checkbox mui-left mui-disabled">'+
+																		'<label>专业性强</label>'+
+																		'<input name="checkbox" value="Item 3" type="checkbox" disabled="disabled">'+
+																	'</div>';
+																}	
+																if(data.pj4=='10'){
+																	pjStr+='<div class="mui-input-row mui-checkbox mui-left" >'+
+																		'<label>文档格式规范</label>'+
+																		'<input name="checkbox" value="Item 4" type="checkbox" disabled="disabled" checked="checked">'+
+																	'</div>';
+																}else if(data.pj4!='10'){
+																	pjStr+='<div class="mui-input-row mui-checkbox mui-left mui-disabled">'+
+																		'<label>文档格式规范</label>'+
+																		'<input name="checkbox" value="Item 4" type="checkbox" disabled="disabled">'+
+																	'</div>';
+																}	
+																if(data.pj5=='10'){
+																	pjStr+='<div class="mui-input-row mui-checkbox mui-left" >'+
+																		'<label>思路清晰</label>'+
+																		'<input name="checkbox" value="Item 5" type="checkbox" disabled="disabled" checked="checked">'+
+																	'</div>';
+																}else if(data.pj5!='10'){
+																	pjStr+='<div class="mui-input-row mui-checkbox mui-left mui-disabled">'+
+																		'<label>思路清晰</label>'+
+																		'<input name="checkbox" value="Item 5" type="checkbox" disabled="disabled">'+
+																	'</div>';
+																}	
+									 							pjStr+='</form>'+
+									 						'</div>'+
+									 				'</li>'+
+									 			'<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;margin-bottom: 10px;">其他：</dt>';
+									 				if(data.other!=null&&data.other!='')
+									 				pjStr+='<li class="green bounceInDown" id="pftext">'+data.other;
+									 				else
+									 				pjStr+='<li class="green bounceInDown" id="pftext">';
+									 				pjStr+='</li>'+
+									 '</dl>'+
+									 '</li>';
+				}
+				if(~status.indexOf("默认好评")){
+					pjStr='<li class="green bounceInDown">'+
+									'<h3 style="color:#38aae1;margin-left: 10px;display: flex;">'+
+									'<span style="color:#38aae1;">超过三天未评价，系统默认好评</span>'+
+									'</h3>'+
+										'<dl style="margin-left: 10px;">'+   
+												'<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;margin-bottom: 10px;">总体评价：</dt>'+
+													'<li class="green bounceInDown" id="pjStar">';
+													for(var i=0;i<5;i++){
+														pjStr+='<i class="mui-icon mui-icon-star-filled"></i>';
+														}
+									pjStr+='</li>'+
+													'<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;margin-bottom: 10px;">业务处理：</dt>'+
+													'<li class="green bounceInDown" id="ywpj">'+
+															'<div class="mui-card">'+
+																'<form class="mui-input-group">';
+																	pjStr+='<div class="mui-input-row mui-checkbox mui-left" >'+
+																		'<label>服务态度好</label>'+
+																		'<input name="checkbox" value="Item 1" type="checkbox" disabled="disabled" checked="checked">'+
+																	'</div>';
+																	pjStr+='<div class="mui-input-row mui-checkbox mui-left" >'+
+																		'<label>及时处理</label>'+
+																		'<input name="checkbox" value="Item 2" type="checkbox" disabled="disabled" checked="checked">'+
+																	'</div>';
+																	pjStr+='<div class="mui-input-row mui-checkbox mui-left" >'+
+																		'<label>专业性强</label>'+
+																		'<input name="checkbox" value="Item 3" type="checkbox" disabled="disabled" checked="checked">'+
+																	'</div>';
+																	pjStr+='<div class="mui-input-row mui-checkbox mui-left" >'+
+																		'<label>文档格式规范</label>'+
+																		'<input name="checkbox" value="Item 4" type="checkbox" disabled="disabled" checked="checked">'+
+																	'</div>';
+																	pjStr+='<div class="mui-input-row mui-checkbox mui-left" >'+
+																		'<label>思路清晰</label>'+
+																		'<input name="checkbox" value="Item 5" type="checkbox" disabled="disabled" checked="checked">'+
+																	'</div>';
+																pjStr+='</form>'+
+															'</div>'+
+													'</li>'+
+												'<dt class="hfinfo" style="border-bottom:1px solid #D9D9D9;margin-bottom: 10px;">其他：</dt>'+
+													'<li class="green bounceInDown" id="pftext">'+"已默认好评"+
+													'</li>'+
+									'</dl>'+
+									'</li>';
+				}
+				$('#memoPro').append(pjStr);
+				pjStr='';
+		    },
+		    error:function(XMLHttpRequest, textStatus, errorThrown){
+		    	//alert(errorThrown)
+		    	//alert(url)
+				alert("ERRor");
+			}
+		    });
+		};
+		//获得附件的文件类型
+		
+	</script>
+	
+    </body>
+
+</html>

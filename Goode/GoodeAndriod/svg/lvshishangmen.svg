@@ -1,0 +1,17 @@
+<svg id="上门服务" xmlns="http://www.w3.org/2000/svg" width="136" height="136" viewBox="0 0 136 136">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 4px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="矩形_2" data-name="矩形 2" class="cls-1" d="M31.633,64.769L65.574,30.828a4,4,0,0,1,5.657,0l33.942,33.941"/>
+  <path id="矩形_3" data-name="矩形 3" class="cls-1" d="M37,62v40a4,4,0,0,0,4,4H95a4,4,0,0,0,4-4V79H66"/>
+  <path id="矩形_4" data-name="矩形 4" class="cls-1" d="M75,91.728L62.272,79,75,66.272"/>
+</svg>

@@ -1,0 +1,326 @@
+{
+    "@platforms" : [ "android", "iPhone", "iPad" ],
+    "id" : "H53A504DF", /*应用的标识，创建应用时自动生成，勿手动修改*/
+    "name" : "Goode企业顾问", /*应用名称，程序桌面图标名称*/
+    "version" : {
+        "name" : "1.0.0", /*应用版本名称*/
+        "code" : "83"
+    },
+    "description" : "", /*应用描述信息*/
+    "icons" : {
+        "72" : "icon.png"
+    },
+    "launch_path" : "index.html", /*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+    "developer" : {
+        "name" : "", /*开发者名称*/
+        "email" : "", /*开发者邮箱地址*/
+        "url" : "http://www.dcloud.io"
+    },
+    "permissions" : {
+        "Cache" : {
+            "description" : "管理应用缓存"
+        },
+        "Console" : {
+            "description" : "跟踪调试输出日志"
+        },
+        "Contacts" : {
+            "description" : "访问系统联系人信息"
+        },
+        "Events" : {
+            "description" : "应用扩展事件"
+        },
+        "Messaging" : {
+            "description" : "访问通讯能力"
+        },
+        "Maps" : {
+            "description" : "管理地图插件"
+        },
+        "Speech" : {
+            "description" : "管理语音识别插件"
+        },
+        "Push" : {}
+    },
+    "plus" : {
+        "error" : {
+            "url" : "error.html"
+        },
+        "popGesture" : "close", /*设置应用默认侧滑返回关闭Webview窗口，none为无侧滑返回功能，hide为侧滑隐藏Webview窗口。参考ask.dcloud.net.cn/article/102*/
+        "splashscreen" : {
+            "autoclose" : true, /*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
+            "waiting" : true,
+            "delay" : "0"
+        },
+        "runmode" : "liberate", /*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
+        "signature" : "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==", /*可选，保留给应用签名，暂不使用*/
+        "distribute" : {
+            "plugins" : {
+                "push" : {
+                    "igexin" : {
+                        "appid" : "j7RQzrCFJC8vGcFIPRD0O5",
+                        "appkey" : "5lerrcV4Hz68XgKII2wh09",
+                        "appsecret" : "pVmP8LyGBJ8HjuJfIke0Y9"
+                    }
+                },
+                "speech" : {
+                    "ifly" : {}
+                }
+            },
+            "apple" : {
+                "appid" : "", /*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
+                "mobileprovision" : "", /*iOS应用打包配置文件*/
+                "password" : "", /*iOS应用打包个人证书导入密码*/
+                "p12" : "", /*iOS应用打包个人证书，打包配置文件关联的个人证书*/
+                "devices" : "universal", /*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
+                "frameworks" : []
+            },
+            "google" : {
+                "packagename" : "", /*Android应用包名，如io.dcloud.HelloH5*/
+                "keystore" : "", /*Android应用打包使用的密钥库文件*/
+                "password" : "", /*Android应用打包使用密钥库中证书的密码*/
+                "aliasname" : "", /*Android应用打包使用密钥库中证书的别名*/
+                "permissions" : [
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.SYSTEM_ALERT_WINDOW\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.RECEIVE_BOOT_COMPLETED\"/>",
+                    "<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+                    "<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>",
+                    "<uses-permission android:name=\"android.permission.INTERNET\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+                ]
+            },
+            "orientation" : [ "portrait-primary", "portrait-secondary" ], /*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
+            "icons" : {
+                "ios" : {
+                    "prerendered" : true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
+
+                    /*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
+                    "iphone" : {
+                        "normal" : "", /*iPhone普通屏幕程序图标，分辨率：57x57*/
+                        "retina" : "", /*iPhone高分屏程序图标，分辨率：114x114*/
+
+                        /*iPhone iOS7高分屏程序图标，分辨率：120x120*/
+                        "spotlight-normal" : "", /*iPhone Spotlight搜索程序图标，分辨率：29x29*/
+                        "spotlight-retina" : "", /*iPhone高分屏Spotlight搜索程序图标，分辨率：58x58*/
+
+                        /*iPhone iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+                        "settings-normal" : "", /*iPhone设置页面程序图标，分辨率：29x29*/
+                        "app@2x" : "D:/h5Project/Goodeiphone/img/start/120.png",
+                        "app@3x" : "D:/h5Project/Goodeiphone/img/start/180.png",
+                        "settings@2x" : "D:/h5Project/Goodeiphone/img/start/58.png",
+                        "settings@3x" : "D:/h5Project/Goodeiphone/img/start/87.png",
+                        "spotlight@3x" : "D:/h5Project/Goodeiphone/img/start/120.png",
+                        "spotlight@2x" : "D:/h5Project/Goodeiphone/img/start/80.png",
+                        "notification@3x" : "D:/h5Project/Goodeiphone/img/start/60.png",
+                        "notification@2x" : "D:/h5Project/Goodeiphone/img/start/40.png"
+                    },
+                    "ipad" : {
+                        "normal" : "", /*iPad普通屏幕程序图标，分辨率：72x72*/
+                        "retina" : "", /*iPad高分屏程序图标，分辨率：144x144*/
+                        "normal7" : "", /*iPad iOS7程序图标，分辨率：76x76*/
+                        "retina7" : "", /*iPad iOS7高分屏程序图标，分辨率：152x152*/
+                        "spotlight-normal" : "", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
+                        "spotlight-retina" : "", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
+
+                        /*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*//*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+                        "settings-normal" : "", /*iPad设置页面程序图标，分辨率：29x29*/
+                        "spotlight" : "",
+                        "settings@2x" : "",
+                        "spotlight@2x" : "",
+                        "notification@2x" : ""
+                    },
+                    "appstore" : "D:/h5Project/Goodeiphone/img/start/1024X1024.png"
+                },
+                "android" : {
+                    "mdpi" : "D:/h5Project/Goodeiphone/img/start/48.png", /*普通屏程序图标，分辨率：48x48*/
+                    "ldpi" : "D:/h5Project/Goodeiphone/img/start/48.png", /*大屏程序图标，分辨率：48x48*/
+                    "hdpi" : "D:/h5Project/Goodeiphone/img/start/72.png", /*高分屏程序图标，分辨率：72x72*/
+                    "xhdpi" : "D:/h5Project/Goodeiphone/img/start/96.png", /*720P高分屏程序图标，分辨率：96x96*/
+                    "xxhdpi" : "D:/h5Project/Goodeiphone/img/start/144.png",
+                    "xxxhdpi" : "D:/h5Project/Goodeiphone/img/start/192.png"
+                }
+            },
+            "splashscreen" : {
+                "ios" : {
+                    "iphone" : {
+                        "default" : "", /*iPhone3启动图片选，分辨率：320x480*/
+                        "retina35" : "img/start/640X960.png", /*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+                        "retina40" : "img/start/640X1136.png",
+                        "retina40l" : "img/start/1136X640.png",
+                        "retina47" : "img/start/750X1334.png",
+                        "retina47l" : "img/start/1334X750.png",
+                        "retina55" : "img/start/1242X2208.png",
+                        "retina55l" : "img/start/2208X1242.png",
+                        "iphonex" : "img/start/1125X2436.png",
+                        "iphonexl" : "img/start/2436X1125.png"
+                    },
+                    "ipad" : {
+                        "portrait" : "", /*iPad竖屏启动图片，分辨率：768x1004*/
+                        "portrait-retina" : "", /*iPad高分屏竖屏图片，分辨率：1536x2008*/
+                        "landscape" : "", /*iPad横屏启动图片，分辨率：1024x748*/
+                        "landscape-retina" : "", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+                        "portrait7" : "", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+                        "portrait-retina7" : "", /*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+                        "landscape7" : "", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+                        "landscape-retina7" : ""
+                    }
+                },
+                "android" : {
+                    "mdpi" : "", /*普通屏启动图片，分辨率：240x282*/
+                    "ldpi" : "", /*大屏启动图片，分辨率：320x442*/
+                    "hdpi" : "img/start/480X762.png", /*高分屏启动图片，分辨率：480x762*/
+                    "xhdpi" : "img/start/720X1242.png", /*720P高分屏启动图片，分辨率：720x1242*/
+                    "xxhdpi" : "img/start/1080X1882.png"
+                }
+            }
+        },
+        "adid" : "120323140309"
+    },
+    "dependencies" : {
+        "pages" : {
+            "index.html" : {
+                "resources" : [
+                    "view/menu/indexmenu.html",
+                    "tabbar.html",
+                    "tab.html",
+                    "js/jquery.min.js",
+                    "js/jquery-3.2.1.js",
+                    "view/menu/grid-default.html"
+                ],
+                "refer" : [
+                    "view/menu/cha_kan_tuan_dui_fu_wu_qi_ye.html",
+                    "view/menu/lv_shi_ji_fen_cha_kan.html",
+                    "index-menu.html",
+                    "view/menu/findcompany.html",
+                    "login.html"
+                ],
+                "priority" : 0
+            },
+            "index-menu.html" : {
+                "resources" : [
+                    "img/real.jpeg",
+                    "js/jquery.min.js",
+                    "js/jquery.i18n.properties-min-1.0.9.js",
+                    "img/top-background.jpg",
+                    "js/language.js",
+                    "font-awesome-4.7.0/css/font-awesome.css",
+                    "js/jquery-3.2.1.js",
+                    "css/menuall.css"
+                ],
+                "refer" : [
+                    "index.html",
+                    "view/menu/findcompany.html",
+                    "login.html",
+                    "setting.html",
+                    "view/Htqc/HtqcSQ.html",
+                    "view/Htqc/HtqcXQ.html",
+                    "view/Htqc/3qicao.html",
+                    "view/Htqc/zqicao.html"
+                ],
+                "priority" : 0
+            },
+            "login.html" : {
+                "resources" : [
+                    "assets/i/favicon.png",
+                    "assets/css/admin.css",
+                    "assets/css/app.css",
+                    "assets/css/amazeui.min.css"
+                ],
+                "refer" : [ "index.html", "index-menu.html" ],
+                "priority" : 0
+            },
+            "setting.html" : {
+                "resources" : [],
+                "refer" : [ "index-menu.html" ],
+                "priority" : 0
+            },
+            "tab.html" : {
+                "resources" : [
+                    "font-awesome-4.7.0/css/font-awesome.min.css",
+                    "js/jquery.i18n.properties-min-1.0.9.js",
+                    "js/language.js",
+                    "font-awesome-4.7.0/css/font-awesome.css"
+                ],
+                "refer" : [],
+                "priority" : 0
+            },
+            "view/menu/findcompany.html" : {
+                "resources" : [],
+                "refer" : [ "view/menu/company-details.html" ],
+                "priority" : 0
+            },
+            "view/Htqc/zqicao.html" : {
+                "resources" : [],
+                "refer" : [ "view/Htqc/HtqcXQ.html" ],
+                "priority" : 0
+            }
+        },
+        "idle" : {
+            "resources" : [
+                "font-awesome-4.7.0/fonts/FontAwesome.otf",
+                "font-awesome-4.7.0/less/larger.less",
+                "font-awesome-4.7.0/less/stacked.less",
+                "font-awesome-4.7.0/less/mixins.less",
+                "font-awesome-4.7.0/fonts/fontawesome-webfont.woff",
+                "font-awesome-4.7.0/scss/_larger.scss",
+                "view/menu/js/feedback.js",
+                "font-awesome-4.7.0/scss/_list.scss",
+                "js/mui.js",
+                "font-awesome-4.7.0/scss/_core.scss",
+                "font-awesome-4.7.0/scss/_path.scss",
+                "fonts/mui.ttf",
+                "font-awesome-4.7.0/fonts/fontawesome-webfont.svg",
+                "font-awesome-4.7.0/less/icons.less",
+                "view/menu/css/feedback.css",
+                "font-awesome-4.7.0/less/path.less",
+                "css/mui.css",
+                "font-awesome-4.7.0/scss/_rotated-flipped.scss",
+                "font-awesome-4.7.0/less/variables.less",
+                "font-awesome-4.7.0/HELP-US-OUT.txt",
+                "font-awesome-4.7.0/scss/_bordered-pulled.scss",
+                "font-awesome-4.7.0/fonts/fontawesome-webfont.eot",
+                "font-awesome-4.7.0/scss/_mixins.scss",
+                "font-awesome-4.7.0/less/screen-reader.less",
+                "font-awesome-4.7.0/less/core.less",
+                "font-awesome-4.7.0/scss/_animated.scss",
+                "font-awesome-4.7.0/scss/_screen-reader.scss",
+                "font-awesome-4.7.0/less/fixed-width.less",
+                "js/mui.min.js",
+                "font-awesome-4.7.0/scss/_fixed-width.scss",
+                "font-awesome-4.7.0/scss/font-awesome.scss",
+                "font-awesome-4.7.0/less/list.less",
+                "font-awesome-4.7.0/fonts/fontawesome-webfont.ttf",
+                "font-awesome-4.7.0/less/rotated-flipped.less",
+                "font-awesome-4.7.0/less/bordered-pulled.less",
+                "font-awesome-4.7.0/fonts/fontawesome-webfont.woff2",
+                "font-awesome-4.7.0/scss/_variables.scss",
+                "font-awesome-4.7.0/scss/_icons.scss",
+                "css/mui.min.css",
+                "font-awesome-4.7.0/less/font-awesome.less",
+                "font-awesome-4.7.0/scss/_stacked.scss",
+                "font-awesome-4.7.0/less/animated.less"
+            ]
+        }
+    },
+    "fullscreen" : true
+}
